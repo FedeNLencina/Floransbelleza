@@ -1,12 +1,13 @@
 import React from "react";
+import Logo from "../../assets/images/logo/logo.svg";
+import "./navbar.css";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          Offcanvas navbar
-        </a>
+        <img src={Logo} alt="logo" className="logo" />
         <button
           class="navbar-toggler"
           type="button"
@@ -24,71 +25,53 @@ export default function Navbar() {
           aria-labelledby="offcanvasNavbarLabel"
         >
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              Offcanvas
-            </h5>
+            <img
+              src={Logo}
+              alt="logo"
+              className="logo offcanvas-title"
+              id="offcanvasNavbarLabel"
+            />
             <button
               type="button"
-              class="btn-close"
+              class="btn-close offcanvas-title"
+              id="offcanvasNavbarLabel"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             ></button>
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
+              <li
+                class="nav-item"
+                aria-current="page"
+                data-bs-toggle="offcanvas"
+              >
+                <Link to="/">Home</Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Link
-                </a>
+
+              <li
+                class="nav-item"
+                aria-current="page"
+                data-bs-toggle="offcanvas"
+              >
+                <Link to="/about">About</Link>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <hr class="dropdown-divider"></hr>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Something else here
-                    </a>
-                  </li>
-                </ul>
+
+              <li
+                class="nav-item"
+                aria-current="page"
+                data-bs-toggle="offcanvas"
+              >
+                <Link to="/servicios">Servicios</Link>
+              </li>
+              <li
+                class="nav-item"
+                aria-current="page"
+                data-bs-toggle="offcanvas"
+              >
+                <Link to="/contact">Contacto</Link>
               </li>
             </ul>
-            <form class="d-flex mt-3" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              ></input>
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
           </div>
         </div>
       </div>
