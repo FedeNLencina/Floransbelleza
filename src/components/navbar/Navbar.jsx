@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-      <div class="container-fluid">
+      <div class="container-fluid divNav">
         <img src={Logo} alt="logo" className="logo" />
         <button
           class="navbar-toggler"
@@ -19,7 +19,7 @@ export default function Navbar() {
           <span class="navbar-toggler-icon"></span>
         </button>
         <div
-          class="offcanvas offcanvas-end"
+          class="offcanvas offcanvas-end divLinks"
           tabindex="-1"
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
