@@ -40,13 +40,15 @@ export default function Navbar() {
             ></button>
           </div>
           <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <ul class="navbar-nav justify-content-around flex-grow-1 pe-3">
               <li
                 class="nav-item"
                 aria-current="page"
                 data-bs-toggle="offcanvas"
               >
-                <Link to="/">Home</Link>
+                <Link to="/" className="navLink">
+                  Home
+                </Link>
               </li>
 
               <li
@@ -54,7 +56,9 @@ export default function Navbar() {
                 aria-current="page"
                 data-bs-toggle="offcanvas"
               >
-                <Link to="/about">About</Link>
+                <Link to="/about" className="navLink">
+                  About
+                </Link>
               </li>
 
               <li
@@ -62,14 +66,18 @@ export default function Navbar() {
                 aria-current="page"
                 data-bs-toggle="offcanvas"
               >
-                <Link to="/servicios">Servicios</Link>
+                <Link to="/servicios" className="navLink">
+                  Servicios
+                </Link>
               </li>
               <li
                 class="nav-item"
                 aria-current="page"
                 data-bs-toggle="offcanvas"
               >
-                <Link to="/contact">Contacto</Link>
+                <Link to="/contact" className="navLink">
+                  Contacto
+                </Link>
               </li>
             </ul>
           </div>
