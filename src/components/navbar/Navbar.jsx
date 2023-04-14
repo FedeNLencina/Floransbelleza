@@ -3,10 +3,10 @@ import Logo from "../../assets/images/logo/logo.svg";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export function Navbar() {
   return (
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-      <div class="container-fluid divNav">
+    <nav class="navbar navbar-expand-lg fixed-top bg-white">
+      <div class="container-fluid divNav ">
         <img src={Logo} alt="logo" className="logo" />
         <button
           class="navbar-toggler"

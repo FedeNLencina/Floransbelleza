@@ -1,15 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/navbar/Navbar";
+import { Navbar } from "./components/navbar/Navbar";
 import About from "./components/about/About";
-import Hero from "./components/hero/Hero";
+import { Hero } from "./components/hero/Hero";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Hero/>}></Route>
-        <Route path="/about" element={<About />}></Route>
+        <Route path="/" element={<Hero/>}/>
+        <Route path="/about" element={<About />}/>
       </Routes>
     </BrowserRouter>
   );
