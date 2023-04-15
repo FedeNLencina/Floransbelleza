@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export function Navbar() {
   return (
-    <nav class="navbar navbar-expand-lg fixed-top bg-white">
+    <nav class="navbar navbar-expand-lg bg-white">
       <div class="container-fluid divNav ">
         <img src={Logo} alt="logo" className="logo" />
         <button
