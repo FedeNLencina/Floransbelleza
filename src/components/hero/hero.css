@@ -1,8 +1,9 @@
 #carouselExampleInterval{
     width: 100%;
+    /* height: 90vh; */
 
 }
 
 .carrousel{
-
+height: 90vh;
 }

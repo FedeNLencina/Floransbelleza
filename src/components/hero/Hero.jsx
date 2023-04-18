@@ -1,11 +1,8 @@
 import React from "react";
 import "./hero.css"
-// import Background from "../../assets/images/backgrounds/backgroundHero2.jpg";
-// import Background2 from "../../assets/images/backgrounds/backgroundHero3.jpg";
-// import Background1 from "../../assets/images/backgrounds/backgroundHero1.jpg";
-import Background3 from "../../assets/images/backgrounds/others/backgroundHero2.jpg";
-import Background4 from "../../assets/images/backgrounds/others/BackgroundHero5Pestanias.jpg";
-import Background5 from "../../assets/images/backgrounds/others/backgroundHero1.jpg";
+import Background3 from "../../assets/images/backgrounds/others/NailsConTaza.jpg";
+import Background4 from "../../assets/images/backgrounds/others/pexels-lisa-fotios-851213.jpg";
+import Background5 from "../../assets/images/backgrounds/others/pexels-valeria-boltneva-1833327.jpg";
 import { HeroImage } from "../heroImages/HeroImage";
 
 
