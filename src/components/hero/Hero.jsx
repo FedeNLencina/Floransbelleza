@@ -1,10 +1,5 @@
 import React from "react";
-import "./hero.css"
-import Background3 from "../../assets/images/backgrounds/others/NailsConTaza.jpg";
-import Background4 from "../../assets/images/backgrounds/others/pexels-lisa-fotios-851213.jpg";
-import Background5 from "../../assets/images/backgrounds/others/pexels-valeria-boltneva-1833327.jpg";
-import { HeroImage } from "../heroImages/HeroImage";
-
+import "./hero.css";
 
 export function Hero() {
   return (
@@ -13,17 +8,27 @@ export function Hero() {
       class="carousel slide"
       data-bs-ride="carousel"
     >
-      <div class="carousel-inner carrousel">
-        <div class="carousel-item active" data-bs-interval="2000">
-          <HeroImage image={Background3}></HeroImage>
-   
-        </div>
-        <div class="carousel-item " data-bs-interval="2000">
-          <HeroImage image={Background4}></HeroImage>
-        </div>
-        <div class="carousel-item " data-bs-interval="2000">
-          <HeroImage image={Background5}></HeroImage>
-        </div>
+      <div class="carousel-inner carrousel carousel-fade">
+        <div
+          id="carousel1"
+          class="carousel-item active"
+          data-bs-interval="3000"
+        ></div>
+        <div
+          id="carousel2"
+          class="carousel-item "
+          data-bs-interval="3000"
+        ></div>
+        <div
+          id="carousel3"
+          class="carousel-item "
+          data-bs-interval="3000"
+        ></div>
+        <div
+          id="carousel4"
+          class="carousel-item "
+          data-bs-interval="3000"
+        ></div>
       </div>
     </div>
   );
