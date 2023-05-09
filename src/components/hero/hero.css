@@ -14,34 +14,6 @@ height: 90vh;
     
 }
 
-#carousel1{
-  background-image: url("../../assets/images/backgrounds/NailsHojas.jpg");
-  background-repeat: repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-#carousel2{
-      background-image: url("../../assets/images/backgrounds/SkinCare1.jpg");
-  background-repeat: repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-#carousel3{
-      background-image: url("../../assets/images/backgrounds/Pestanias1.jpg");
-  background-repeat: repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-#carousel4{
-      background-image: url("../../assets/images/backgrounds/Depilacion2.jpg");
-  background-repeat: repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
+.carrouselImage{
+  width: 80%;
 }
