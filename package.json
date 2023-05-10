@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "commit": "npx git-cz"
+    "commit": "git-cz"
   },
   "dependencies": {
     "git-cz": "^4.9.0",
