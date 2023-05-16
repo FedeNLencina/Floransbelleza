@@ -8,26 +8,22 @@
 }
 
 .titleContainer {
-  padding-top: 10rem;
+  padding-top: 5rem;
   padding-left: 4rem;
 }
 
 .heroTitle {
-  font-size: 3.4rem;
+  font-size: 3rem;
   font-style: italic;
   font-family: "Cormorant Garamond", serif;
   color: rgb(0, 0, 0);
   line-height: 1.5em;
   font-weight: 500;
+  margin: 0;
 }
 
 .carrousel {
   height: 90vh;
-}
-
-.carousel-inner {
-  /* height: 90vh;
-    width: 100%; */
 }
 
 .carrouselImage {

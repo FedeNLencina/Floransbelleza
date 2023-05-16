@@ -10,10 +10,13 @@ export function Hero() {
       <div className="row d-flex justify-content-center">
         <div className="col-5 text-center container-fluid titleContainer">
           <h2 className="heroTitle">La belleza comienza</h2>
-          <br />
           <h2 className="heroTitle">cuando decides ser</h2>
-          <br />
           <h2 className="heroTitle">tu misma</h2>
+          <p>
+            Our Nail Salon brings unique and custom nail designs to all
+            customers of LA area. We are a team of nail artists specializing on
+            complete nail care.
+          </p>
         </div>
         <div className="col-7">
           <div
