@@ -7,7 +7,7 @@ import uniasHero3 from "../../assets/images/backgrounds/UniasHero3Piel.png";
 export function Hero() {
   return (
     <div className="container-fluid hero">
-      <div className="row d-flex justify-content-center">
+      <div className="row d-flex justify-content-center rowContainer">
         <div className="col-6 text-center container-fluid heroInfo">
           <div className="titleContainer">
             <h2 className="heroTitle">La belleza comienza cuando </h2>
