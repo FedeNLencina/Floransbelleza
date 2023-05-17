@@ -8,17 +8,22 @@ export function Hero() {
   return (
     <div className="container-fluid hero">
       <div className="row d-flex justify-content-center">
-        <div className="col-5 text-center container-fluid titleContainer">
-          <h2 className="heroTitle">La belleza comienza</h2>
-          <h2 className="heroTitle">cuando decides ser</h2>
-          <h2 className="heroTitle">tu misma</h2>
-          <p>
-            Our Nail Salon brings unique and custom nail designs to all
-            customers of LA area. We are a team of nail artists specializing on
-            complete nail care.
-          </p>
+        <div className="col-6 text-center container-fluid heroInfo">
+          <div className="titleContainer">
+            <h2 className="heroTitle">La belleza comienza cuando </h2>
+            <h2 className="heroTitle">decides ser tu misma</h2>
+            <hr className="heroLine" />
+          </div>
+          <div className="heroTextContainer">
+            <p className="heroText">
+              Nuestro salon brinda un diseño unico personalizado de uñas,
+              pestañas, tratamientos faciales y depilacion. Nuestra dedicacion
+              se basa en brindar el mejor servicio de belleza para todas
+              nuestras clientas
+            </p>
+          </div>
         </div>
-        <div className="col-7">
+        <div className="col-6">
           <div
             id="carouselExampleInterval"
             class="carousel slide"

@@ -3,23 +3,43 @@
 }
 
 .hero {
-  padding: 1% 0;
+  padding: 6% 0;
   background-color: #f3f3f3;
+  height: 90vh;
+}
+
+.heroInfo {
+  padding-left: 2rem;
 }
 
 .titleContainer {
-  padding-top: 5rem;
-  padding-left: 4rem;
+  padding-top: 6rem;
 }
 
 .heroTitle {
   font-size: 3rem;
-  font-style: italic;
-  font-family: "Cormorant Garamond", serif;
-  color: rgb(0, 0, 0);
-  line-height: 1.5em;
-  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  color: #151515;
+  font-weight: 600;
   margin: 0;
+}
+
+.heroLine {
+  border: 4px solid rgb(235, 122, 122);
+  border-radius: 5px;
+  margin-left: 20%;
+  width: 60%;
+}
+
+.heroTextContainer {
+  padding: 0 8rem;
+}
+
+.heroText {
+  font-size: 1.4rem;
+  color: rgb(0, 0, 0);
+
+  margin-top: 5rem;
 }
 
 .carrousel {
@@ -27,5 +47,5 @@
 }
 
 .carrouselImage {
-  width: 80%;
+  width: 85%;
 }
