@@ -42,6 +42,22 @@
   margin-top: 5rem;
 }
 
+.heroButtonContainer {
+  padding-top: 3rem;
+}
+
+.heroButton {
+  font-size: 1.3rem;
+  color: #151515;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  background-color: rgb(248, 214, 207);
+}
+
+.heroButton:hover {
+  background-color: rgb(255, 177, 163);
+}
+
 .carrousel {
   height: 90vh;
 }

@@ -22,6 +22,11 @@ export function Hero() {
               nuestras clientas
             </p>
           </div>
+          <div className="heroButtonContainer">
+            <button type="button" class="btn heroButton">
+              Mas info
+            </button>
+          </div>
         </div>
         <div className="col-6">
           <div
