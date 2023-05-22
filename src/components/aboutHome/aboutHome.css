@@ -30,3 +30,8 @@
   display: inline-block;
   background-color: #ffd8cb;
 }
+
+.aboutHomeParagraph {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}

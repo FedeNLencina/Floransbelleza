@@ -39,8 +39,8 @@ export function Navbar() {
               aria-label="Close"
             ></button>
           </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-around flex-grow-1 pe-3">
+          <div class="offcanvas-body linksContainer">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li
                 class="nav-item"
                 aria-current="page"
@@ -68,6 +68,15 @@ export function Navbar() {
               >
                 <Link to="/servicios" className="navLink">
                   Servicios
+                </Link>
+              </li>
+              <li
+                class="nav-item"
+                aria-current="page"
+                data-bs-toggle="offcanvas"
+              >
+                <Link to="/talleres" className="navLink">
+                  Talleres
                 </Link>
               </li>
               <li

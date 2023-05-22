@@ -36,6 +36,10 @@
   background-size: 0 0.1em, 100% 0.1em;
 }
 
+.nav-item {
+  padding: 0rem 3rem;
+}
+
 .divNav {
   width: 75%;
 }

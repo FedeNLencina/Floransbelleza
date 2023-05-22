@@ -12,18 +12,24 @@ export function AboutHome() {
         <div className="col-6 d-flex justify-content-center align-items-center">
           <div className="col-10 aboutHomeTitleContainer">
             <h2 className="aboutHomeTitle">
-              Nuestra
+              Quienes
               <br></br>
-              <span className="dividerAboutHome">historia</span>
+              <span className="dividerAboutHome">somos</span>
             </h2>
-            <p>
-              Comenzamos como un pequeño salón de spa en Islington, Londres.
-              Nuestra idea principal era crear el mejor salón de spa del mundo.
-              ¿Puede haber compromisos en el mejor salón del mundo? Nuestra
-              respuesta siempre es no, nos preocupamos por la mejor calidad,
-              contratamos a los mejores especialistas y brindamos el mejor
-              servicio al cliente. Este enfoque nos permitió crecer y crear un
-              equipo increíble apasionado por todo lo que hacemos.
+            <p className="aboutHomeParagraph">
+              Comenzamos como un pequeño salón de manicuria en Villa de Mayo,
+              ofrecieron los mejores servicios personalizados de manicuria y
+              pestañas. Como sabemos que la belleza no esta centrada unicamente
+              en manos y pies, ampliamos servicios tratamientos faciales,
+              depilacion definitiva y body up. Nuestro deseo es que pases un
+              momento agradable cuando dejes tus manos en las de nuestros
+              profesionales que están altamente capacitados para embellecer tus
+              uñas, enseñarte a protegerlas y darte tips para cuidados
+              especiales. es un servicio estrategicamente pensado para que
+              puedas tener tus manos y pies impecables, siempre! Nos preocupamos
+              por la mejor calidad brindamos el mejor servicio al cliente. Este
+              enfoque nos permitió crecer y crear un equipo increíble apasionado
+              por todo lo que hacemos.
             </p>
           </div>
         </div>
