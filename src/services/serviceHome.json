@@ -1,8 +1,42 @@
 {
   "configuration": {
-    "id": "",
-    "icon:": "",
-    "title": "",
-    "description": ""
+    "items": [
+      {
+        "id": 1,
+        "title": "Manicure",
+        "icon:": "../assets/icons/nail.svg",
+        "description": "Nuestros tratamientos de manicura estimulan el crecimiento de las uñas y suavizan la piel seca y sin brillo."
+      },
+      {
+        "id": 2,
+        "title": "Pedicure",
+        "icon:": "../assets/icons/pedicure.svg",
+        "description": "Los servicios de pedicura brindan una restauración completa para sus uñas con pulido adicional."
+      },
+      {
+        "id": 3,
+        "title": "Lifting",
+        "icon:": "../assets/icons/pestanias2.svg",
+        "description": "Ofrecemos el mejor servicio de lifting, para fortalecerlas y lucirlas de la mejor manera posible."
+      },
+      {
+        "id": 3,
+        "icon:": "../assets/icons/skinCream.svg",
+        "title": "Skin Care",
+        "description": "Ofrecemos el mejor servicio de lifting, para fortalecerlas y lucirlas de la mejor manera posible."
+      },
+      {
+        "id": 4,
+        "icon:": "../assets/icons/nailsBottle.svg",
+        "title": "Nails Art",
+        "description": "Creamos los mejores diseños personalizados para que tus manos puedan lucirse en cualquier momento."
+      },
+      {
+        "id": 5,
+        "icon:": "../assets/icons/depilacion.svg",
+        "title": "Nails Art",
+        "description": "Ofrecemos el mejor servicio de lifting, para fortalecerlas y lucirlas de la mejor manera posible."
+      }
+    ]
   }
 }
