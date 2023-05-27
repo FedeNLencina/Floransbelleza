@@ -1,5 +1,4 @@
 import React from "react";
-import BoxDescription from "../boxDescription/BoxDescription";
 
 export function BoxIcon({ icon, title, description }) {
   return (
