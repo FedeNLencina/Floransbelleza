@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ServiceHomeIconContext } from "../../../context/ServiceHomeIconContext";
 import "./boxIcon.css";
 
-export function BoxIcon({ icon, title, description }) {
-  //const [description, setDescription] = useState(items[0].description);
+export function BoxIcon({ item }) {
+  const { descriptionHandler } = useContext(ServiceHomeIconContext);
+  console.log("item descripction: ", item.description);
   return (
     <div className="text-center">
-      <img className="iconImg" src={icon} alt={icon}></img>
-      <p className="iconTitle">{title}</p>
+      <button
+        onClick={() => descriptionHandler(item.description)}
+        type="button"
+        class="btn btn-light"
+      >
+        <img className="iconImg" src={item.icon} alt={item.icon}></img>
+        <p className="iconTitle">{item.title}</p>
+      </button>
     </div>
   );
 }

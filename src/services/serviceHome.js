@@ -31,13 +31,13 @@ export const serviceIcons = [
     title: "Skin Care",
     icon: skinCare,
     description:
-      "Ofrecemos el mejor servicio de lifting, para fortalecerlas y lucirlas de la mejor manera posible.",
+      "Utilizamos productos personalizados segun el diagnostico y tipo de cada piel, obteniendo una higiene y tonificacion de piel unica.",
   },
   {
-    id: 6,
+    id: 5,
     title: "Depilacion",
     icon: depilation,
     description:
-      "Ofrecemos el mejor servicio de lifting, para fortalecerlas y lucirlas de la mejor manera posible.",
+      "Un proceso rapido y eficaz para obtener una piel suave y bella.",
   },
 ];

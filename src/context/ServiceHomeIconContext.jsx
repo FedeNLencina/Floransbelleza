@@ -7,9 +7,15 @@ export const ServiceHomeProvider = ({ children }) => {
 
   const descriptionHandler = (description) => {
     setDescriptionItem(description);
+    console.log("description setted using context", descriptionItem);
   };
   return (
-    <ServiceHomeIconContext.Provider value={{}}>
+    <ServiceHomeIconContext.Provider
+      value={{
+        descriptionHandler,
+        descriptionItem,
+      }}
+    >
       {children}
     </ServiceHomeIconContext.Provider>
   );
