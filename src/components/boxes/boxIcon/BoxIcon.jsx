@@ -5,16 +5,16 @@ import "./boxIcon.css";
 export function BoxIcon({ item }) {
   const { descriptionHandler } = useContext(ServiceHomeIconContext);
   console.log("item descripction: ", item.description);
+
   return (
-    <div className="text-center">
-      <button
-        onClick={() => descriptionHandler(item.description)}
-        type="button"
-        class="btn btn-light"
-      >
-        <img className="iconImg" src={item.icon} alt={item.icon}></img>
-        <p className="iconTitle">{item.title}</p>
-      </button>
+    <div
+      onClick={() => {
+        descriptionHandler(item.description);
+      }}
+      className="text-center divIconContainer"
+    >
+      <img className="iconImg" src={item.icon} alt={item.icon}></img>
+      <p className="iconTitle">{item.title}</p>
     </div>
   );
 }

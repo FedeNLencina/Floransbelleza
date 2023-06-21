@@ -7,3 +7,22 @@
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.3rem;
 }
+
+.divIconContainer:link {
+  font-weight: bold;
+}
+
+.divIconContainer:visited {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.divIconContainer:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.divIconContainer:active {
+  font-weight: bold;
+  text-decoration: underline;
+}
