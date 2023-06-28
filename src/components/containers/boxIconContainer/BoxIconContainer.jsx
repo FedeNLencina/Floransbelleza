@@ -27,7 +27,7 @@ export function BoxIconContainer({ items }) {
   }, [descriptionItem]);
 
   return (
-    <div className="container">
+    <div className="container boxIconContainer">
       <div className="row d-flex justify-content-center">
         {serviceItems.map((service) => {
           return (
@@ -47,7 +47,7 @@ export function BoxIconContainer({ items }) {
           );
         })}
       </div>
-      <div>
+      <div className="text-center">
         <p>{descriptionItem}</p>
       </div>
     </div>

@@ -1,0 +1,11 @@
+.buttonCommon {
+  font-size: 1.3rem;
+  color: #151515;
+  padding: 0.4rem 1.2rem;
+  border-radius: 25px;
+  background-color: rgb(248, 214, 207);
+}
+
+.buttonCommon:hover {
+  background-color: rgb(255, 177, 163);
+}

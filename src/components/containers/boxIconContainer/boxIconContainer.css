@@ -1,3 +1,8 @@
+.boxIconContainer {
+  height: 10rem;
+  margin-bottom: 3%;
+}
+
 .boxIconColumn {
   width: 12%;
 }
