@@ -2,3 +2,7 @@
   padding-top: 1rem;
 }
 
+.cardImg {
+  height: auto;
+  width: 100%;
+}
