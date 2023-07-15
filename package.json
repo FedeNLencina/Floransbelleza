@@ -10,6 +10,7 @@
     "commit": "git-cz"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "git-cz": "^4.9.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",

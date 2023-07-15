@@ -2,7 +2,34 @@
   padding-top: 1rem;
 }
 
+.card {
+  position: relative;
+}
+.card:hover .cardImg {
+  opacity: 0.5;
+}
+
+.card:hover .cardTitle {
+  color: black;
+}
+
 .cardImg {
   height: auto;
   width: 100%;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.cardTitle {
+  position: absolute;
+  color: transparent;
+  margin: auto;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transition-property: color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }

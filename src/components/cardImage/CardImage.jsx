@@ -10,6 +10,7 @@ export const CardImage = ({ element }) => {
           className="card-img-top img-fluid cardImg"
           alt="..."
         />
+        <h2 className="cardTitle ">{element.title}</h2>
       </div>
     </div>
   );
