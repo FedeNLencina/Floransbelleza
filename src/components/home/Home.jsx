@@ -3,6 +3,7 @@ import { Hero } from "../hero/Hero";
 import { AboutHome } from "../aboutHome/AboutHome";
 import { ServiceHome } from "../serviceHome/ServiceHome";
 import { ServiceHomeProvider } from "../../context/ServiceHomeIconContext";
+import { Testimonials } from "../testimonials/Testimonials";
 
 export function Home() {
   return (
@@ -12,6 +13,7 @@ export function Home() {
       <ServiceHomeProvider>
         <ServiceHome />
       </ServiceHomeProvider>
+      <Testimonials />
     </>
   );
 }
