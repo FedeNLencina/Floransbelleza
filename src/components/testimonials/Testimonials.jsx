@@ -1,5 +1,6 @@
 import React from "react";
 import "./testimonials.css";
+import { testimonials } from "../../services/testimonials";
 
 export function Testimonials() {
   return (
@@ -7,19 +8,31 @@ export function Testimonials() {
       <div class="container">
         <div id="demo" class="carousel slide" data-bs-ride="true">
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="carousel-caption">
-                <p>
-                  If Shai Reznik's TDD videos don't convince you to add
-                  automated testing your code, I don't know what will.This was
-                  the very best explanation of frameworks for brginners that
-                  I've ever seen.
-                </p>
-                <img src="https://i.imgur.com/lE89Aey.jpg" />
-                <div id="image-caption">Nick Doe</div>
-              </div>
-            </div>
-            <div class="carousel-item ">
+            {testimonials.map((testimonial, index) => {
+              return (
+                <div
+                  key={index}
+                  class={`carousel-item ${index === 0 ? "active" : ""}`}
+                >
+                  <div class="carousel-caption carouselContentContainer">
+                    <p>{testimonial.description}</p>
+
+                    <div id="image-caption">{testimonial.name}</div>
+                  </div>
+                </div>
+              );
+            })}
+            {/* <div class="carousel-caption">
+              <p>
+                If Shai Reznik's TDD videos don't convince you to add automated
+                testing your code, I don't know what will.This was the very best
+                explanation of frameworks for brginners that I've ever seen.
+              </p>
+              <img src="https://i.imgur.com/lE89Aey.jpg" />
+              <div id="image-caption">Nick Doe</div>
+            </div> */}
+
+            {/* <div class="carousel-item ">
               <div class="carousel-caption">
                 <p>
                   If Shai Reznik's TDD videos don't convince you to add
@@ -42,7 +55,7 @@ export function Testimonials() {
                 <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid" />
                 <div id="image-caption">Harry Mon</div>
               </div>
-            </div>
+            </div> */}
           </div>
           <a
             class="carousel-control-prev"
