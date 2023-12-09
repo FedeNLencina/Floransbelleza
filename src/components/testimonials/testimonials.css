@@ -1,25 +1,45 @@
 .testimonialsContainer {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: rgb(236, 173, 173);
   font-family: "Open Sans";
+  margin-top: 30px;
 }
+
 #demo {
   background: linear-gradient(112deg, #ffffff 50%, antiquewhite 50%);
   max-width: 900px;
   margin: auto;
 }
+
+.testimonialsTitleContainer {
+  background-color: #ffffff;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.testimonialsTitle {
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  color: #151515;
+  font-weight: 600;
+  margin: 0;
+  text-decoration: rgb(235, 122, 122);
+}
+
 .carousel-caption {
   position: initial;
   z-index: 10;
-  padding: 5rem 8rem;
+  padding: 6rem 8rem;
   color: rgba(78, 77, 77, 0.856);
   text-align: center;
   font-size: 1.2rem;
   font-style: italic;
   font-weight: bold;
   line-height: 2rem;
-  height: 25vh;
+  height: 30vh;
 }
 
 @media (max-width: 767px) {
