@@ -6,7 +6,7 @@ export const CardImage = ({ element }) => {
     <div className="col-sm-6 col-md-6 col-lg-4 cardCol" key={element.id}>
       <div className="card">
         <img
-          src={element.image}
+          src={element.imagePath}
           className="card-img-top img-fluid cardImg"
           alt="..."
         />

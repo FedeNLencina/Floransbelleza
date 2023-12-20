@@ -1,4 +1,6 @@
-export const testimonials = [
+import { Testimonial } from "../types/Testimonial";
+
+export const testimonials: Testimonial[] = [
   {
     id: 1,
     name: "Cynthyya Ybarra",

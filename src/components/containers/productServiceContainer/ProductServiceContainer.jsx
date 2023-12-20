@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { productServices } from "../../../services/productServices";
+import { productServices } from "../../../utils/productServices";
 import { ProductServiceList } from "../../lists/productServiceList/ProductServiceList";
 export const ProductServiceContainer = () => {
   const [servicesArray, setServicesArray] = useState(productServices);

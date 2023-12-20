@@ -4,6 +4,7 @@ import About from "./components/about/About";
 import { Home } from "./components/home/Home";
 import ProductServices from "./components/productServicies/ProductServices";
 import "animate.css";
+import React from "react";
 
 function App() {
   return (

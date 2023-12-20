@@ -1,7 +1,6 @@
 import React from "react";
 import "./testimonials.css";
-import { testimonials } from "../../services/testimonials";
-import { Title } from "../commons/Title/Title";
+import { testimonials } from "../../utils/testimonials";
 
 export function Testimonials() {
   return (

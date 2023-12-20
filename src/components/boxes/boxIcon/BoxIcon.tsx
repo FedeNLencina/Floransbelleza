@@ -1,8 +1,13 @@
 import React, { useContext } from "react";
 import { ServiceHomeIconContext } from "../../../context/ServiceHomeIconContext";
 import "./boxIcon.css";
+import { Service } from "src/types/ServiceInfoHome";
 
-export function BoxIcon({ item }) {
+type BoxIconProps = {
+  item: Service;
+};
+
+export function BoxIcon({ item }: BoxIconProps) {
   const { descriptionHandler } = useContext(ServiceHomeIconContext);
   console.log("item descripction: ", item.description);
 
@@ -13,7 +18,7 @@ export function BoxIcon({ item }) {
       }}
       className="text-center divIconContainer"
     >
-      <img className="iconImg" src={item.icon} alt={item.icon}></img>
+      <img className="iconImg" src={item.icon.path} alt={item.title}></img>
       <p className="iconTitle">{item.title}</p>
     </div>
   );
