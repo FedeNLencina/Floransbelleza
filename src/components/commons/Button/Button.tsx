@@ -2,21 +2,26 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./button.css";
 
-export const Button = ({ value, route }) => {
+type ButtonProps = {
+  text: string;
+  route: string;
+};
+
+export const Button = ({ text, route }: ButtonProps) => {
   const navigate = useNavigate();
 
-  const navigateTo = (route) => {
+  const navigateTo = (route: string) => {
     navigate(route);
   };
 
   return (
     <div className="d-flex justify-content-center">
       <button
-        class="btn buttonCommon"
+        className="btn buttonCommon"
         type="button"
         onClick={() => navigateTo(`${route}`)}
       >
-        {value}
+        {text}
       </button>
     </div>
   );

@@ -13,7 +13,7 @@ export function ServiceHome() {
       <ServiceHomeProvider>
         <BoxIconContainer items={serviceIcons} />
       </ServiceHomeProvider>
-      <Button value="Ver servicios" route="/servicios" />
+      <Button text="Ver servicios" route="/servicios" />
     </div>
   );
 }

@@ -1,15 +1,21 @@
 import React, { useContext } from "react";
-import { ServiceHomeIconContext } from "../../../context/ServiceHomeIconContext";
+import {
+  ServiceHomeIconContext,
+  ServiceHomeIconContextType,
+} from "../../../context/ServiceHomeIconContext";
 import "./boxIcon.css";
-import { Service } from "src/types/ServiceInfoHome";
+import { ServiceInfoHome } from "src/types/ServiceInfoHome";
 
 type BoxIconProps = {
-  item: Service;
+  item: ServiceInfoHome;
 };
 
 export function BoxIcon({ item }: BoxIconProps) {
-  const { descriptionHandler } = useContext(ServiceHomeIconContext);
-  console.log("item descripction: ", item.description);
+  const contextValue = useContext(ServiceHomeIconContext);
+
+  const { descriptionHandler } = contextValue || {
+    descriptionHandler: () => {},
+  };
 
   return (
     <div
