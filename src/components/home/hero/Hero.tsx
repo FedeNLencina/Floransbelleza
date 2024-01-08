@@ -1,8 +1,8 @@
 import React from "react";
 import "./hero.css";
-import uniasHero1 from "../../assets/images/backgrounds/UniasHero1Piel.png";
-import uniasHero2 from "../../assets/images/backgrounds/UniasHero2Piel.png";
-import uniasHero3 from "../../assets/images/backgrounds/UniasHero3Piel.png";
+import uniasHero1 from "../../../assets/images/backgrounds/UniasHero1Piel.png";
+import uniasHero2 from "../../../assets/images/backgrounds/UniasHero2Piel.png";
+import uniasHero3 from "../../../assets/images/backgrounds/UniasHero3Piel.png";
 
 export function Hero() {
   return (

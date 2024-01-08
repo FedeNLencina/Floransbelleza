@@ -1,9 +1,10 @@
 import React from "react";
-import { Hero } from "../hero/Hero";
-import { AboutHome } from "../aboutHome/AboutHome";
-import { ServiceHome } from "../serviceHome/ServiceHome";
+import { Hero } from "./hero/Hero";
+import { AboutHome } from "./aboutHome/AboutHome";
+import { ServiceHome } from "./serviceHome/ServiceHome";
 import { ServiceHomeProvider } from "../../context/ServiceHomeIconContext";
-import { Testimonials } from "../testimonials/Testimonials";
+import { Testimonials } from "./testimonials/Testimonials";
+import { Booking } from "./booking/Booking";
 
 export function Home() {
   return (
@@ -14,6 +15,7 @@ export function Home() {
         <ServiceHome />
       </ServiceHomeProvider>
       <Testimonials />
+      <Booking />
     </>
   );
 }

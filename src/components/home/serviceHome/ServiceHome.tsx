@@ -1,10 +1,10 @@
 import React from "react";
-import { BoxIconContainer } from "../containers/boxIconContainer/BoxIconContainer";
-import { serviceIcons } from "../../utils/serviceHome";
+import { BoxIconContainer } from "../../containers/boxIconContainer/BoxIconContainer";
+import { serviceIcons } from "../../../utils/serviceHome";
 import "./serviceHome.css";
-import { ServiceHomeProvider } from "../../context/ServiceHomeIconContext";
-import { Button } from "../commons/Button/Button";
-import { Title } from "../commons/Title/Title";
+import { ServiceHomeProvider } from "../../../context/ServiceHomeIconContext";
+import { Button } from "../../commons/Button/Button";
+import { Title } from "../../commons/Title/Title";
 
 export function ServiceHome() {
   return (

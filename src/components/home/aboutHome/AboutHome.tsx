@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImage from "../../assets/images/about/Screenshot_298.png";
+import aboutImage from "../../../assets/images/about/Screenshot_298.png";
 import "./aboutHome.css";
 
 export function AboutHome() {

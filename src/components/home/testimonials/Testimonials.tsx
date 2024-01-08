@@ -1,6 +1,6 @@
 import React from "react";
 import "./testimonials.css";
-import { testimonials } from "../../utils/testimonials";
+import { testimonials } from "../../../utils/testimonials";
 
 export function Testimonials() {
   return (
