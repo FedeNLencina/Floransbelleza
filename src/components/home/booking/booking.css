@@ -1,6 +1,6 @@
 .bookingContainer {
   padding: 90px 0px;
-  background-image: url(C:\Users\Fede\Documents\Github\Floransbelleza\src\assets\images\backgrounds\NailsConTaza.jpg);
+  background-image: url("../../../assets/images/backgrounds/NailsConTaza.jpg");
   background-attachment: fixed !important;
   background-repeat: no-repeat;
   background-position: center;
