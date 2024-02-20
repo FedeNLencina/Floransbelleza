@@ -29,6 +29,10 @@
   text-decoration: rgb(235, 122, 122);
 }
 
+.carouselContainer {
+  padding: 60px 0;
+}
+
 .carousel-caption {
   position: initial;
   z-index: 10;

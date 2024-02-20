@@ -10,7 +10,7 @@ export function Testimonials() {
       </div>
       <div className="container">
         <div id="demo" className="carousel slide" data-bs-ride="true">
-          <div className="carousel-inner">
+          <div className="carousel-inner carouselContainer">
             {testimonials.map((testimonial, index) => {
               return (
                 <div
