@@ -5,6 +5,7 @@ import { ServiceHome } from "./serviceHome/ServiceHome";
 import { ServiceHomeProvider } from "../../context/ServiceHomeIconContext";
 import { Testimonials } from "./testimonials/Testimonials";
 import { Booking } from "./booking/Booking";
+import { PictureGalery } from "./pictureGallery/PictureGalery";
 
 export function Home() {
   return (
@@ -16,6 +17,7 @@ export function Home() {
       </ServiceHomeProvider>
       <Testimonials />
       <Booking />
+      <PictureGalery />
     </>
   );
 }
