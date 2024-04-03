@@ -13,7 +13,7 @@ export default function GalleryPhoto({ galleryPhoto }: GalleryPhotoProps) {
       </div>
       <div className="content">
         <div>
-          <h2>Image Title</h2>
+          <h2>{galleryPhoto.title}</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
             accusamus molestias quidem iusto.
