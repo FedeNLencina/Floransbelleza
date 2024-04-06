@@ -14,10 +14,6 @@ export default function GalleryPhoto({ galleryPhoto }: GalleryPhotoProps) {
       <div className="content">
         <div>
           <h2>{galleryPhoto.title}</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-            accusamus molestias quidem iusto.
-          </p>
         </div>
       </div>
     </div>

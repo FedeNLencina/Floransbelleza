@@ -1,6 +1,5 @@
 import { GalleryPhotoListItem } from "src/types/GalleryPhotoListItem";
 import { GalleryPhotoList } from "../../lists/galleryPhotoList/GalleryPhotoList";
-import { galleryPhotoList } from "../../../utils/galleryPhotos";
 import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../../firebase/config.database";
@@ -16,6 +15,7 @@ export function GalleryPhotosContainer() {
         const photoGalleryRef = await getDocs(
           collection(db, "photosGalleryHome")
         );
+        const newArray: GalleryPhotoListItem[] = [];
 
         photoGalleryRef.forEach((document) => {
           const documentRef = document.data();
@@ -23,13 +23,10 @@ export function GalleryPhotosContainer() {
             id: documentRef.id,
             title: documentRef.title,
             imagePath: documentRef.imagePath,
-            description: documentRef.description,
           };
-          setGalleryPhotosList((prevPhotosList) => [
-            ...prevPhotosList,
-            photoGalleryObject,
-          ]);
+          newArray.push(photoGalleryObject);
         });
+        setGalleryPhotosList(newArray);
       } catch (e) {
         console.log("Error getting cached document:", e);
       }
