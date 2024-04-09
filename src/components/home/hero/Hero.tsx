@@ -16,14 +16,14 @@ export function Hero() {
             <h2 className="heroTitle">decides ser tu misma</h2>
             <hr className="heroLine" />
           </div>
-          {isDesktop &&
+          {isDesktop && (
             <>
               <div className="heroTextContainer">
                 <p className="heroText">
                   Nuestro salon brinda un diseño unico personalizado de uñas,
-                  pestañas, tratamientos faciales y depilacion. Nuestra dedicacion
-                  se basa en brindar el mejor servicio de belleza para todas
-                  nuestras clientas
+                  pestañas, tratamientos faciales y depilacion. Nuestra
+                  dedicacion se basa en brindar el mejor servicio de belleza
+                  para todas nuestras clientas
                 </p>
               </div>
               <div className="heroButtonContainer">
@@ -31,9 +31,10 @@ export function Hero() {
                   Mas info
                 </button>
               </div>
-            </>}
+            </>
+          )}
         </div>
-        <div className="col-lg-6 col-12">
+        <div className="col-lg-6 col-12 heroCarousel">
           <div
             id="carouselExampleInterval"
             className="carousel slide"
@@ -83,14 +84,14 @@ export function Hero() {
               <span className="visually-hidden">Next</span>
             </button>
           </div>
-          {isMobile &&
+          {isMobile && (
             <>
               <div className="heroTextContainer">
                 <p className="heroText">
                   Nuestro salon brinda un diseño unico personalizado de uñas,
-                  pestañas, tratamientos faciales y depilacion. Nuestra dedicacion
-                  se basa en brindar el mejor servicio de belleza para todas
-                  nuestras clientas
+                  pestañas, tratamientos faciales y depilacion. Nuestra
+                  dedicacion se basa en brindar el mejor servicio de belleza
+                  para todas nuestras clientas
                 </p>
               </div>
               <div className="heroButtonContainer">
@@ -98,9 +99,9 @@ export function Hero() {
                   Mas info
                 </button>
               </div>
-            </>}
+            </>
+          )}
         </div>
-
       </div>
     </div>
   );
