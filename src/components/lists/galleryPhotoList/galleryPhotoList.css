@@ -1,6 +1,6 @@
 .galleryPhotoContainer {
   position: relative;
-  width: 1160px;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -10,8 +10,8 @@
 }
 .galleryPhotoContainer .box {
   position: relative;
-  width: 275px;
-  height: 275px;
+  width: 250px;
+  height: 250px;
   background: #000;
   transition: 0.5s;
   transform-style: preserve-3d;

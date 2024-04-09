@@ -35,3 +35,10 @@
   margin-top: 1rem;
   font-size: 1.1rem;
 }
+
+@media (width<400px) {
+  .aboutHomeTitle{
+    font-size: 1rem;
+  }
+ 
+}

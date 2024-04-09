@@ -9,6 +9,7 @@
 .hero {
   padding: 6% 0;
   background-color: #f3f3f3;
+  position: relative;
 }
 
 .heroInfo {
@@ -38,16 +39,18 @@
   padding: 0 8rem;
 }
 
+
 .heroText {
   font-size: 1.4rem;
   color: rgb(0, 0, 0);
-
   margin-top: 5rem;
 }
 
 .heroButtonContainer {
   padding-top: 3rem;
 }
+
+
 
 .heroButton {
   font-size: 1.3rem;
@@ -67,4 +70,17 @@
 
 .carrouselImage {
   width: 85%;
+}
+
+@media (width<400px) {
+  .heroTitle{
+    font-size: 1rem;
+  }
+  .heroText {
+    font-size: 0.8rem;
+  }
+
+  .titleContainer {
+    padding-top: 0;
+  }
 }
