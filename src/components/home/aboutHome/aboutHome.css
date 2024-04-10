@@ -37,8 +37,28 @@
 }
 
 @media (width<400px) {
-  .aboutHomeTitle{
-    font-size: 1rem;
+  .aboutHomeTitleContainer {
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
- 
+  .aboutHomeTitle {
+    font-size: 2rem;
+  }
+
+  .aboutHomeParagraph {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .imgAboutHomeContainer {
+    padding-top: 1.5rem;
+  }
+
+  .imgAboutHome {
+    height: auto;
+    width: 90%;
+  }
 }

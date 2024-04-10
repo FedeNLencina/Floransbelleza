@@ -1,15 +1,20 @@
 import React from "react";
 import aboutImage from "../../../assets/images/about/Screenshot_298.png";
 import "./aboutHome.css";
+import { useWindowDimensions } from "src/hooks/useWindowDimention";
 
 export function AboutHome() {
+  const { isMobile, isDesktop } = useWindowDimensions();
   return (
     <div className="container aboutHomeContainer">
       <div className="row">
-        <div className="col-6 d-flex justify-content-center align-items-center imgAboutHomeContainer">
-          <img src={aboutImage} className="imgAboutHome"></img>
-        </div>
-        <div className="col-6 d-flex justify-content-center align-items-center">
+        {isDesktop && (
+          <div className="col-lg-6 col-12 d-flex justify-content-center align-items-center imgAboutHomeContainer">
+            <img src={aboutImage} className="imgAboutHome"></img>
+          </div>
+        )}
+
+        <div className="col-lg-6 col-12 d-flex justify-content-center align-items-center">
           <div className="col-10 aboutHomeTitleContainer">
             <h2 className="aboutHomeTitle">
               Quienes
@@ -33,6 +38,12 @@ export function AboutHome() {
             </p>
           </div>
         </div>
+
+        {isMobile && (
+          <div className="col-lg-6 col-12 d-flex justify-content-center align-items-center imgAboutHomeContainer">
+            <img src={aboutImage} className="imgAboutHome"></img>
+          </div>
+        )}
       </div>
     </div>
   );
