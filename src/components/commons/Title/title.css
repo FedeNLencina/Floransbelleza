@@ -14,3 +14,9 @@
   margin-top: 0;
   width: 50%;
 }
+
+@media (width<400px) {
+  .textTitle {
+    font-size: 2rem;
+  }
+}

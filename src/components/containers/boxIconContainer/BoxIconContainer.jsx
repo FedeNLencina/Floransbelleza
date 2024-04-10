@@ -34,8 +34,8 @@ export function BoxIconContainer({ items }) {
             <div
               className={
                 selectedService === service
-                  ? `col-2 boxIconColumn selected`
-                  : `col-2 boxIconColumn`
+                  ? `col-lg-2 col-6 boxIconColumn selected`
+                  : `col-lg-2 col-6 boxIconColumn`
               }
               key={service.id}
               onClick={() => {
@@ -47,7 +47,7 @@ export function BoxIconContainer({ items }) {
           );
         })}
       </div>
-      <div className="text-center">
+      <div className="text-center boxIconDescriptionContainer">
         <p>{descriptionItem}</p>
       </div>
     </div>

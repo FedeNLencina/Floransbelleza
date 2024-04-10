@@ -2,3 +2,9 @@
   background-color: #f3f3f3;
   padding: 3rem 5rem;
 }
+
+@media (width<400px) {
+  .serviceHomeContainer {
+    padding: 1rem 2rem;
+  }
+}

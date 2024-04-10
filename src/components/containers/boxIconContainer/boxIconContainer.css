@@ -12,3 +12,17 @@
   text-decoration: underline;
   font-weight: bold;
 }
+
+@media (width<400px) {
+  .boxIconContainer {
+    height: auto;
+  }
+  .boxIconColumn {
+    width: 50%;
+  }
+
+  .boxIconDescriptionContainer {
+    height: 100px;
+    overflow: scroll;
+  }
+}

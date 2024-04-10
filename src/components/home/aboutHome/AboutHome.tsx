@@ -6,8 +6,8 @@ import { useWindowDimensions } from "src/hooks/useWindowDimention";
 export function AboutHome() {
   const { isMobile, isDesktop } = useWindowDimensions();
   return (
-    <div className="container aboutHomeContainer">
-      <div className="row">
+    <div className="container d-flex justify-content-center aboutHomeContainer">
+      <div className="row aboutHomeContainerRow">
         {isDesktop && (
           <div className="col-lg-6 col-12 d-flex justify-content-center align-items-center imgAboutHomeContainer">
             <img src={aboutImage} className="imgAboutHome"></img>
