@@ -69,7 +69,7 @@
   width: 85%;
 }
 
-@media (width<400px) {
+@media (width<500px) {
   #carouselExampleInterval {
     padding-left: 50px;
   }
