@@ -71,11 +71,30 @@
 
 @media (width<500px) {
   #carouselExampleInterval {
-    padding-left: 50px;
+    height: 32vh;
+  }
+
+  .carrouselImage {
+    width: 100%;
+  }
+
+  .hero {
+    display: flex;
+  }
+
+  .heroInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .heroCarousel {
     padding-right: 0%;
+    height: 64vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
   }
 
   .heroTextContainer {
@@ -84,11 +103,11 @@
   }
 
   .heroTitle {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
 
   .heroText {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-top: 2rem;
   }
 
@@ -103,7 +122,12 @@
   }
 
   .heroButton {
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: 0.3rem 1.3rem;
+  }
+
+  .rowContainer {
+    padding: 7% 0;
+    gap: 40px;
   }
 }
