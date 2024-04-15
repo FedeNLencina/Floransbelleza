@@ -81,3 +81,20 @@ i {
   transition: none;
   opacity: unset;
 }
+
+@media (width<500px) {
+  .carouselContentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+  .testimonialsContainer {
+    margin-top: 0px;
+  }
+
+  .testimonialsTitle {
+    margin-bottom: 30px;
+  }
+}

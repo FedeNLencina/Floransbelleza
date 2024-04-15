@@ -97,3 +97,14 @@
 .galleryPhotoContainer .box:hover .content p {
   transform: translateY(0px);
 }
+
+@media (width<500px) {
+  .galleryPhotoContainer {
+    gap: 10px;
+  }
+  .galleryPhotoContainer .box {
+    width: 136px;
+    height: 143px;
+    margin-right: 0;
+  }
+}

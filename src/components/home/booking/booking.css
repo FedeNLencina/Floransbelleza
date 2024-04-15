@@ -59,3 +59,16 @@
   line-height: 2rem;
   z-index: 1;
 }
+
+@media (width<500px) {
+  .bookingContainer {
+    padding: 60px 0px;
+  }
+  .bookingTitle {
+    font-size: 2rem;
+  }
+  .bookingParagraph {
+    font-size: 1.2rem;
+    padding: 4rem 2rem;
+  }
+}

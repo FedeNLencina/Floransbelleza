@@ -7,7 +7,7 @@ type GalleryPhotoProps = {
 
 export default function GalleryPhoto({ galleryPhoto }: GalleryPhotoProps) {
   return (
-    <div className="box col-lg-3 col-12">
+    <div className="box col-lg-3 col-3">
       <div className="imgBx">
         <img src={galleryPhoto.imagePath} />
       </div>
