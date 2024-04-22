@@ -6,6 +6,7 @@ import { ServiceHomeProvider } from "../../context/ServiceHomeIconContext";
 import { Testimonials } from "./testimonials/Testimonials";
 import { Booking } from "./booking/Booking";
 import { PictureGalery } from "./pictureGallery/PictureGalery";
+import { InstagramFeed } from "./instagramFeed/InstagramFeed";
 
 export function Home() {
   return (
@@ -18,6 +19,7 @@ export function Home() {
       <Testimonials />
       <Booking />
       <PictureGalery />
+      <InstagramFeed />
     </>
   );
 }
