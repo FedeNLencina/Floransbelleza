@@ -1,0 +1,28 @@
+.footerContainer {
+  padding: 100px 40px 40px 40px;
+}
+
+.footerContacts h5 {
+  font-size: 1.4rem;
+}
+
+.footerContacts p {
+  font-size: 1.2rem;
+}
+
+.addressText {
+  margin-bottom: 0px;
+}
+
+.contactIcon {
+  background-color: transparent;
+  padding: 1rem 0;
+  margin-right: 12px;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: gray;
+}
+
+.termsText {
+  padding-top: 40px;
+}

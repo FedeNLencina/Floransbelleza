@@ -1,0 +1,20 @@
+.scrollTopButton {
+  position: fixed;
+  z-index: 99999;
+  width: 45px;
+  height: 45px;
+  bottom: 30px;
+  right: 30px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background-color: rgba(59, 59, 59, 0.25);
+  transition: all 400ms ease-in-out;
+}
+
+.scrollTopButton i {
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 0;
+}
