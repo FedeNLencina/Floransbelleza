@@ -26,3 +26,22 @@
 .termsText {
   padding-top: 40px;
 }
+
+@media (width < 500px) {
+  .footerContainer {
+    padding: 40px 30px 30px 30px;
+  }
+
+  .footerContacts p {
+    font-size: 1rem;
+  }
+
+  .mapContainer {
+    margin-top: 20px;
+  }
+
+  .termsText {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}

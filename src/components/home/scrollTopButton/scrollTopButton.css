@@ -18,3 +18,10 @@
   background-color: transparent;
   padding: 0;
 }
+
+@media (width < 500px) {
+  .scrollTopButton {
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.562);
+  }
+}
