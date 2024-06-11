@@ -42,9 +42,23 @@ export function Footer() {
         </div>
       </div>
       <div className="d-flex justify-content-between termsText">
-        <div className="">© 2022 Floransbelleza. All Rights Reserved</div>
-        <div className="">Privacy Policy Terms & Conditions</div>
+        <div className="text-dark">
+          © 2022 Floransbelleza. All Rights Reserved
+        </div>
+        <div className="text-dark">Privacy Policy Terms & Conditions</div>
       </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        className="waveFooter"
+      >
+        <path
+          fill="#FFA07A"
+          fill-opacity="0.4"
+          d="M0,128L120,144C240,160,480,192,720,192C960,192,1200,160,1320,144L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+          data-darkreader-inline-fill=""
+        ></path>
+      </svg>
     </div>
   );
 }

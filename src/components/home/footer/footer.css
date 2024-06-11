@@ -1,5 +1,6 @@
 .footerContainer {
   padding: 100px 40px 40px 40px;
+  position: relative;
 }
 
 .footerContacts h5 {
@@ -25,11 +26,17 @@
 
 .termsText {
   padding-top: 40px;
+  color: black;
+}
+
+.waveFooter {
+  position: absolute;
+  bottom: 0px;
 }
 
 @media (width < 500px) {
   .footerContainer {
-    padding: 40px 30px 30px 30px;
+    padding: 40px 30px 10px 30px;
   }
 
   .footerContacts p {
@@ -43,5 +50,10 @@
   .termsText {
     text-align: center;
     font-size: 0.9rem;
+  }
+
+  .waveFooter {
+    left: -40px;
+    bottom: 5px;
   }
 }
