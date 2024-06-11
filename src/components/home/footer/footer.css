@@ -31,7 +31,7 @@
 
 .waveDesktop {
   position: absolute;
-  bottom: -29px;
+  bottom: -60px;
 }
 
 @media (width < 500px) {
