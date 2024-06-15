@@ -1,15 +1,9 @@
 import React from "react";
 import Logo from "../../assets/images/logo/logo.svg";
 import "./navbar.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export function Navbar() {
-  const location = useLocation();
-
-  const route = location.pathname;
-  const isHome = route === "/";
-  console.log("isHome: ", isHome);
-
   return (
     <nav class="navbar sticky-top navbar-expand-lg bg-white">
       <div class="container-fluid divNav ">
@@ -85,18 +79,15 @@ export function Navbar() {
                   Talleres
                 </Link>
               </li>
-              {isHome && (
-                <li
-                  class="nav-item"
-                  aria-current="page"
-                  data-bs-toggle="offcanvas"
-                >
-                  <a href="#contacto" className="navLink">
-                    {" "}
-                    Contacto
-                  </a>
-                </li>
-              )}
+              <li
+                class="nav-item"
+                aria-current="page"
+                data-bs-toggle="offcanvas"
+              >
+                <Link to="/contacto" className="navLink">
+                  Contacto
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
