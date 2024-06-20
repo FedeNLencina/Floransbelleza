@@ -4,6 +4,7 @@ import { ProductServiceList } from "../../lists/productServiceList/ProductServic
 import { ServiceListItem } from "src/types/ServiceListItem";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "src/firebase/config.database";
+import { Loader } from "@components/loader/Loader";
 
 export const ProductServiceContainer = () => {
   const [servicesArray, setServicesArray] = useState<Array<ServiceListItem>>(
@@ -38,7 +39,11 @@ export const ProductServiceContainer = () => {
   }, []);
   return (
     <div className="container">
-      <ProductServiceList services={servicesArray} />
+      {servicesArray.length < 1 && <Loader />}
+
+      {servicesArray.length > 0 && (
+        <ProductServiceList services={servicesArray} />
+      )}
     </div>
   );
 };
