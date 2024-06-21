@@ -5,6 +5,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../../firebase/config.database";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { Loader } from "@components/loader/Loader";
 
 export function GalleryPhotosContainer() {
   const [galleryPhotosList, setGalleryPhotosList] = useState<
@@ -39,8 +40,8 @@ export function GalleryPhotosContainer() {
 
   return (
     <div>
-      {!galleryPhotosList ? (
-        <Skeleton />
+      {galleryPhotosList.length < 1 ? (
+        <Loader />
       ) : (
         <GalleryPhotoList galleryPhotoList={galleryPhotosList} />
       )}

@@ -1,6 +1,5 @@
 import React from "react";
 import "./booking.css";
-import { Button } from "../../commons/Button/Button";
 
 export function Booking() {
   return (
