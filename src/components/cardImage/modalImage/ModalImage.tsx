@@ -1,6 +1,10 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+interface ModalImageProps {
+  imgPath: string;
+}
 
-export function ModalImage(imgPath: string) {
+export function ModalImage({ imgPath }: ModalImageProps) {
   return (
     <>
       <div
@@ -16,6 +20,7 @@ export function ModalImage(imgPath: string) {
               <h5 className="modal-title" id="exampleModalLabel">
                 Modal title
               </h5>
+
               <button
                 type="button"
                 className="btn-close"
@@ -23,6 +28,11 @@ export function ModalImage(imgPath: string) {
                 aria-label="Close"
               ></button>
             </div>
+            <LazyLoadImage
+              src={imgPath}
+              className="card-img-top img-fluid"
+              alt="..."
+            />
 
             <div className="modal-footer">
               <button
