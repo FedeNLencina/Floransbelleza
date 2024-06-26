@@ -9,22 +9,11 @@ type ProductServiceListProps = {
 
 export const ProductServiceList = ({ services }: ProductServiceListProps) => {
   const [imgPath, setImgPath] = useState("");
-  const [showModal, setShowModal] = useState(true);
 
   const openModal = (imgPath: string) => {
-    console.log("entro aca: ");
-    console.log("imgPath: ", imgPath);
-    console.log("showModal: ", showModal);
-
     setImgPath(imgPath);
-    setShowModal(true);
   };
 
-  const closeModal = () => {
-    setImgPath("");
-    setShowModal(false);
-    setShowModal(true);
-  };
   return (
     <>
       <div className="row">
@@ -36,11 +25,7 @@ export const ProductServiceList = ({ services }: ProductServiceListProps) => {
                 key={service.id}
                 openModal={openModal}
               />
-              <ModalImage
-                imgPath={imgPath}
-                closeModal={closeModal}
-                showModal={showModal}
-              />
+              <ModalImage imgPath={imgPath} />
             </>
           );
         })}
