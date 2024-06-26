@@ -7,36 +7,36 @@ import { db } from "src/firebase/config.database";
 import { Loader } from "@components/loader/Loader";
 
 export const ProductServiceContainer = () => {
-  const [servicesArray, setServicesArray] =
-    useState<Array<ServiceListItem>>(productServices);
+  const [servicesArray, setServicesArray] = useState<Array<ServiceListItem>>(
+    []
+  );
 
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     try {
-  //       const photoGalleryRef = await getDocs(
-  //         collection(db, "servicesGallery")
-  //       );
-  //       const newArray: ServiceListItem[] = [];
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const photoGalleryRef = await getDocs(
+          collection(db, "servicesGallery")
+        );
+        const newArray: ServiceListItem[] = [];
 
-  //       photoGalleryRef.forEach((document) => {
-  //         const documentRef = document.data();
-  //         const photoGalleryObject: ServiceListItem = {
-  //           id: documentRef.id,
-  //           title: documentRef.title,
-  //           imagePath: documentRef.image,
-  //           description: "",
-  //         };
-  //         newArray.push(photoGalleryObject);
-  //       });
-  //       setServicesArray(newArray);
-  //     } catch (e) {
-  //       console.log("Error getting cached document:", e);
-  //     }
-  //   };
+        photoGalleryRef.forEach((document) => {
+          const documentRef = document.data();
+          const photoGalleryObject: ServiceListItem = {
+            id: documentRef.id,
+            title: documentRef.title,
+            imagePath: documentRef.image,
+            description: "",
+          };
+          newArray.push(photoGalleryObject);
+        });
+        setServicesArray(newArray);
+      } catch (e) {
+        console.log("Error getting cached document:", e);
+      }
+    };
 
-  //   getData();
-
-  // }, []);
+    getData();
+  }, []);
 
   return (
     <div className="container">

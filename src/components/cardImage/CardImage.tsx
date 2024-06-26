@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./cardImage.css";
 import { ServiceListItem } from "src/types/ServiceListItem";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { ModalImage } from "./modalImage/ModalImage";
 
 type CardImageProps = {
   element: ServiceListItem;
