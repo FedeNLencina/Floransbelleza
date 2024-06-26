@@ -8,10 +8,12 @@ type ProductServiceListProps = {
 };
 
 export const ProductServiceList = ({ services }: ProductServiceListProps) => {
-  const [imgPath, setImgPath] = useState("");
+  const [imgPath, setImgPath] = useState<string>("");
+  const [serviceTitle, setServiceTitle] = useState<string>("");
 
-  const openModal = (imgPath: string) => {
+  const openModal = (imgPath: string, serviceTitle: string) => {
     setImgPath(imgPath);
+    setServiceTitle(serviceTitle);
   };
 
   return (
@@ -25,7 +27,7 @@ export const ProductServiceList = ({ services }: ProductServiceListProps) => {
                 key={service.id}
                 openModal={openModal}
               />
-              <ModalImage imgPath={imgPath} />
+              <ModalImage imgPath={imgPath} title={serviceTitle} />
             </>
           );
         })}

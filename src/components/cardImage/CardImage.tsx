@@ -6,7 +6,7 @@ import { ModalImage } from "./modalImage/ModalImage";
 
 type CardImageProps = {
   element: ServiceListItem;
-  openModal: (imgPath: string) => void;
+  openModal: (imgPath: string, serviceTitle: string) => void;
 };
 
 export const CardImage = ({ element, openModal }: CardImageProps) => {
@@ -18,7 +18,7 @@ export const CardImage = ({ element, openModal }: CardImageProps) => {
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
           onClick={() => {
-            openModal(element.imagePath);
+            openModal(element.imagePath, element.title);
           }}
         >
           <LazyLoadImage

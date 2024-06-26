@@ -2,9 +2,10 @@ import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 interface ModalImageProps {
   imgPath: string;
+  title: string;
 }
 
-export function ModalImage({ imgPath }: ModalImageProps) {
+export function ModalImage({ imgPath, title }: ModalImageProps) {
   return (
     <>
       <div
@@ -19,7 +20,7 @@ export function ModalImage({ imgPath }: ModalImageProps) {
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title" id="exampleModalLabel">
-                Modal title
+                {title}
               </h5>
 
               <button
