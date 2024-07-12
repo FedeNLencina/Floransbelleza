@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../assets/images/logo/logo.svg";
 import "./navbar.css";
 import { Link, useLocation } from "react-router-dom";
@@ -7,11 +7,39 @@ export function Navbar() {
   const location = useLocation();
   const currentPath = location.pathname;
   const isAboutPath = currentPath === "/about";
-  console.log("location: ", location);
-  console.log("current path: ", currentPath);
-  console.log("isAboutPath: ", isAboutPath);
+
+  const [colorChange, setColorchange] = useState(false);
+  const [navbarClass, setNavbarClass] = useState("");
+
+  const getClassNameNavbar = (): void => {
+    if ((window.scrollY >= 20 && isAboutPath) || !isAboutPath) {
+      setNavbarClass("navbar sticky-top navbar-expand-lg bg-white");
+    }
+    if (window.scrollY == 0 && isAboutPath)
+      setNavbarClass("navbar sticky-top navbar-expand-lg bg-transparent");
+  };
+
+  const changeNavbarColor = () => {
+    if (window.scrollY >= 20 && isAboutPath) {
+      setColorchange(true);
+    }
+    if (!isAboutPath) {
+      setColorchange(true);
+    } else {
+      setColorchange(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", getClassNameNavbar);
+    console.log("colorChange: ", colorChange);
+    console.log("isAboutPath: ", isAboutPath);
+    console.log("navbarClass: ", navbarClass);
+    return () => window.removeEventListener("scroll", getClassNameNavbar);
+  }, [navbarClass, currentPath]);
+
   return (
-    <nav className="navbar sticky-top navbar-expand-lg bg-white">
+    <nav className={navbarClass}>
       <div className="container-fluid divNav ">
         <img src={Logo} alt="logo" className="logo" />
         <button
@@ -26,7 +54,7 @@ export function Navbar() {
         </button>
         <div
           className="offcanvas offcanvas-end divLinks"
-          tabIndex="-1"
+          tabIndex={-1}
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
         >
