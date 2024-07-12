@@ -1,30 +1,36 @@
 import React from "react";
 import Logo from "../../assets/images/logo/logo.svg";
 import "./navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export function Navbar() {
+  const location = useLocation();
+  const currentPath = location.pathname;
+  const isAboutPath = currentPath === "/about";
+  console.log("location: ", location);
+  console.log("current path: ", currentPath);
+  console.log("isAboutPath: ", isAboutPath);
   return (
-    <nav class="navbar sticky-top navbar-expand-lg bg-white">
-      <div class="container-fluid divNav ">
+    <nav className="navbar sticky-top navbar-expand-lg bg-white">
+      <div className="container-fluid divNav ">
         <img src={Logo} alt="logo" className="logo" />
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
         <div
-          class="offcanvas offcanvas-end divLinks"
-          tabindex="-1"
+          className="offcanvas offcanvas-end divLinks"
+          tabIndex="-1"
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
         >
-          <div class="offcanvas-header">
+          <div className="offcanvas-header">
             <img
               src={Logo}
               alt="logo"
@@ -33,16 +39,16 @@ export function Navbar() {
             />
             <button
               type="button"
-              class="btn-close offcanvas-title"
+              className="btn-close offcanvas-title"
               id="offcanvasNavbarLabel"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             ></button>
           </div>
-          <div class="offcanvas-body linksContainer">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <div className="offcanvas-body linksContainer">
+            <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li
-                class="nav-item"
+                className="nav-item"
                 aria-current="page"
                 data-bs-toggle="offcanvas"
               >
@@ -52,7 +58,7 @@ export function Navbar() {
               </li>
 
               <li
-                class="nav-item"
+                className="nav-item"
                 aria-current="page"
                 data-bs-toggle="offcanvas"
               >
@@ -62,7 +68,7 @@ export function Navbar() {
               </li>
 
               <li
-                class="nav-item"
+                className="nav-item"
                 aria-current="page"
                 data-bs-toggle="offcanvas"
               >
@@ -71,7 +77,7 @@ export function Navbar() {
                 </Link>
               </li>
               <li
-                class="nav-item"
+                className="nav-item"
                 aria-current="page"
                 data-bs-toggle="offcanvas"
               >
@@ -80,7 +86,7 @@ export function Navbar() {
                 </Link>
               </li>
               <li
-                class="nav-item"
+                className="nav-item"
                 aria-current="page"
                 data-bs-toggle="offcanvas"
               >
