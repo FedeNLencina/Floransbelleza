@@ -1,0 +1,7 @@
+.aboutContainer {
+  background-image: url("../../assets/images/unias/Screenshot_390-min.png");
+  background: no-repeat center center;
+  background-size: cover;
+  padding-top: 160px;
+  padding-bottom: 110px;
+}

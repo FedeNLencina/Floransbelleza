@@ -4,42 +4,33 @@ import "./navbar.css";
 import { Link, useLocation } from "react-router-dom";
 
 export function Navbar() {
+  const [colorChange, setColorchange] = useState(true);
   const location = useLocation();
   const currentPath = location.pathname;
   const isAboutPath = currentPath === "/about";
 
-  const [colorChange, setColorchange] = useState(false);
-  const [navbarClass, setNavbarClass] = useState("");
-
-  const getClassNameNavbar = (): void => {
-    if ((window.scrollY >= 20 && isAboutPath) || !isAboutPath) {
-      setNavbarClass("navbar sticky-top navbar-expand-lg bg-white");
-    }
-    if (window.scrollY == 0 && isAboutPath)
-      setNavbarClass("navbar sticky-top navbar-expand-lg bg-transparent");
-  };
-
-  const changeNavbarColor = () => {
-    if (window.scrollY >= 20 && isAboutPath) {
-      setColorchange(true);
-    }
-    if (!isAboutPath) {
-      setColorchange(true);
-    } else {
-      setColorchange(false);
-    }
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", getClassNameNavbar);
-    console.log("colorChange: ", colorChange);
-    console.log("isAboutPath: ", isAboutPath);
-    console.log("navbarClass: ", navbarClass);
-    return () => window.removeEventListener("scroll", getClassNameNavbar);
-  }, [navbarClass, currentPath]);
+    const changeNavbarColor = (): void => {
+      if (isAboutPath) {
+        if (window.scrollY >= 20) {
+          setColorchange(true);
+        } else {
+          setColorchange(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", changeNavbarColor);
+
+    return () => window.removeEventListener("scroll", changeNavbarColor);
+  }, [currentPath]);
 
   return (
-    <nav className={navbarClass}>
+    <nav
+      className={`navbar sticky-top navbar-expand-lg ${
+        colorChange && !isAboutPath ? "navActive" : "navInactive"
+      }`}
+    >
       <div className="container-fluid divNav ">
         <img src={Logo} alt="logo" className="logo" />
         <button

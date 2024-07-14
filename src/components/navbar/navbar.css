@@ -14,6 +14,15 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+
+.navActive {
+  background-color: white;
+  transition: all 450ms ease-in-out;
+}
+
+.navInactive {
+  background-color: transparent;
+}
 .navLink {
   height: 100%;
   text-decoration: none;
@@ -46,4 +55,10 @@
 
 .logo {
   width: 25%;
+}
+
+@media (width<500px) {
+  .inactive {
+    background-color: white;
+  }
 }
