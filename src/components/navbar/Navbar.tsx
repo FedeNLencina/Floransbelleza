@@ -4,14 +4,20 @@ import "./navbar.css";
 import { Link, useLocation } from "react-router-dom";
 
 export function Navbar() {
-  const [colorChange, setColorchange] = useState(true);
   const location = useLocation();
   const currentPath = location.pathname;
   const isAboutPath = currentPath === "/about";
+  const [colorChange, setColorchange] = useState(true);
+
+  const isAboutPathAndIsActive = colorChange && isAboutPath;
+  const isAboutPathAndIsInactive = !colorChange && isAboutPath;
+  const isNotAboutPathAndIsActive = colorChange && !isAboutPath;
 
   useEffect(() => {
     const changeNavbarColor = (): void => {
       if (isAboutPath) {
+        console.log("entre en current path ");
+        setColorchange(false);
         if (window.scrollY >= 20) {
           setColorchange(true);
         } else {
@@ -19,6 +25,9 @@ export function Navbar() {
         }
       }
     };
+    console.log("current path: ", currentPath);
+
+    changeNavbarColor();
 
     window.addEventListener("scroll", changeNavbarColor);
 
@@ -28,7 +37,10 @@ export function Navbar() {
   return (
     <nav
       className={`navbar sticky-top navbar-expand-lg ${
-        colorChange && !isAboutPath ? "navActive" : "navInactive"
+        (isAboutPathAndIsActive && !isAboutPathAndIsInactive) ||
+        isNotAboutPathAndIsActive
+          ? "navActive"
+          : "navInactive"
       }`}
     >
       <div className="container-fluid divNav ">

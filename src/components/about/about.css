@@ -1,7 +1,15 @@
 .aboutContainer {
-  background-image: url("../../assets/images/unias/Screenshot_390-min.png");
-  background: no-repeat center center;
+  padding: 0%;
+  height: 200vh;
+}
+
+.topSection {
+  width: 100%;
+  background-image: url("../../assets/images/backgrounds/aboutSection/Screenshot_89.png");
+  background-repeat: no-repeat;
   background-size: cover;
   padding-top: 160px;
   padding-bottom: 110px;
+  position: absolute;
+  top: 0;
 }
