@@ -39,6 +39,26 @@
   transition: background-size 400ms;
 }
 
+.linkActive {
+  color: rgb(0, 0, 0);
+}
+
+.linkInactive {
+  color: rgb(255, 253, 253);
+  background: linear-gradient(to right, transparent, transparent),
+    linear-gradient(to right, rgb(255, 254, 254), rgb(255, 255, 255));
+  background-size: 100% 0.1em, 0 0.1em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.linkInactive:hover,
+.linkInactive:focus {
+  color: rgb(255, 255, 255);
+  background-size: 0 0.1em, 100% 0.1em;
+}
+
 .navLink:hover,
 .navLink:focus {
   text-decoration: none;

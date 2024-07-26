@@ -13,6 +13,10 @@ export function Navbar() {
   const isAboutPathAndIsInactive = !colorChange && isAboutPath;
   const isNotAboutPathAndIsActive = colorChange && !isAboutPath;
 
+  console.log("isAboutPathAndIsActive:", isAboutPathAndIsActive);
+  console.log("isAboutPathAndIsInactive:", isAboutPathAndIsInactive);
+  console.log("isNotAboutPathAndIsActive:", isNotAboutPathAndIsActive);
+
   useEffect(() => {
     const changeNavbarColor = (): void => {
       if (isAboutPath) {
@@ -23,6 +27,8 @@ export function Navbar() {
         } else {
           setColorchange(false);
         }
+      } else {
+        setColorchange(true);
       }
     };
     console.log("current path: ", currentPath);
@@ -83,7 +89,15 @@ export function Navbar() {
                 aria-current="page"
                 data-bs-toggle="offcanvas"
               >
-                <Link to="/" className="navLink">
+                <Link
+                  to="/"
+                  className={`navLink ${
+                    (isAboutPathAndIsActive && !isAboutPathAndIsInactive) ||
+                    isNotAboutPathAndIsActive
+                      ? "linkActive"
+                      : "linkInactive"
+                  }`}
+                >
                   Home
                 </Link>
               </li>
@@ -93,7 +107,15 @@ export function Navbar() {
                 aria-current="page"
                 data-bs-toggle="offcanvas"
               >
-                <Link to="/about" className="navLink">
+                <Link
+                  to="/about"
+                  className={`navLink ${
+                    (isAboutPathAndIsActive && !isAboutPathAndIsInactive) ||
+                    isNotAboutPathAndIsActive
+                      ? "linkActive"
+                      : "linkInactive"
+                  }`}
+                >
                   About
                 </Link>
               </li>
@@ -103,7 +125,15 @@ export function Navbar() {
                 aria-current="page"
                 data-bs-toggle="offcanvas"
               >
-                <Link to="/servicios" className="navLink">
+                <Link
+                  to="/servicios"
+                  className={`navLink ${
+                    (isAboutPathAndIsActive && !isAboutPathAndIsInactive) ||
+                    isNotAboutPathAndIsActive
+                      ? "linkActive"
+                      : "linkInactive"
+                  }`}
+                >
                   Servicios
                 </Link>
               </li>
@@ -112,7 +142,15 @@ export function Navbar() {
                 aria-current="page"
                 data-bs-toggle="offcanvas"
               >
-                <Link to="/talleres" className="navLink">
+                <Link
+                  to="/talleres"
+                  className={`navLink ${
+                    (isAboutPathAndIsActive && !isAboutPathAndIsInactive) ||
+                    isNotAboutPathAndIsActive
+                      ? "linkActive"
+                      : "linkInactive"
+                  }`}
+                >
                   Talleres
                 </Link>
               </li>
@@ -121,7 +159,15 @@ export function Navbar() {
                 aria-current="page"
                 data-bs-toggle="offcanvas"
               >
-                <Link to="/contacto" className="navLink">
+                <Link
+                  to="/contacto"
+                  className={`navLink ${
+                    (isAboutPathAndIsActive && !isAboutPathAndIsInactive) ||
+                    isNotAboutPathAndIsActive
+                      ? "linkActive"
+                      : "linkInactive"
+                  }`}
+                >
                   Contacto
                 </Link>
               </li>
