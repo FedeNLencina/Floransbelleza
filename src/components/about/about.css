@@ -1,6 +1,5 @@
 .aboutContainer {
   padding: 0%;
-  height: 200vh;
 }
 
 .topSection {
@@ -8,8 +7,8 @@
   background-image: url("../../assets/images/backgrounds/aboutSection/Screenshot_89.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 160px;
-  padding-bottom: 110px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   position: absolute;
   top: 0;
 }

@@ -14,6 +14,16 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+.divNavInnerContainer {
+  width: 70%;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
 
 .navActive {
   background-color: white;
@@ -43,6 +53,13 @@
   color: rgb(0, 0, 0);
 }
 
+.navLink:hover,
+.navLink:focus {
+  text-decoration: none;
+  color: black;
+  background-size: 0 0.1em, 100% 0.1em;
+}
+
 .linkInactive {
   color: rgb(255, 253, 253);
   background: linear-gradient(to right, transparent, transparent),
@@ -59,23 +76,8 @@
   background-size: 0 0.1em, 100% 0.1em;
 }
 
-.navLink:hover,
-.navLink:focus {
-  text-decoration: none;
-  color: black;
-  background-size: 0 0.1em, 100% 0.1em;
-}
-
 .nav-item {
   padding: 0rem 3rem;
-}
-
-.divLinks {
-  width: 70%;
-}
-
-.logo {
-  width: 25%;
 }
 
 @media (width<990px) {
@@ -84,5 +86,19 @@
   }
   .navInactive {
     background-color: white;
+  }
+
+  .linkActive {
+    color: black;
+  }
+  .linkInactive {
+    color: black;
+  }
+  .divNavInnerContainer {
+    width: 100%;
+  }
+  .logoContainer {
+    justify-content: start;
+    width: 100%;
   }
 }
