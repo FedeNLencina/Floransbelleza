@@ -5,7 +5,11 @@ export default function About() {
   return (
     <div className="container-fluid aboutContainer">
       <section className="topSection">
-        <h1>hola</h1>
+        <div className="topSectionBlackBackground"></div>
+        <div className="topSectionInfoContainer">
+          <h1 className="topSectionTitle">Sobre Floransbelleza</h1>
+          <h2 className="topSectionText">Conocenos</h2>
+        </div>
       </section>
     </div>
   );
