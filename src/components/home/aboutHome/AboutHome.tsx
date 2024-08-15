@@ -23,7 +23,7 @@ export function AboutHome() {
             </h2>
             <p className="aboutHomeParagraph">
               Comenzamos como un pequeño salón de manicuria en Villa de Mayo,
-              ofrecieron los mejores servicios personalizados de manicuria y
+              ofreciendo los mejores servicios personalizados de manicuria y
               pestañas. Como sabemos que la belleza no esta centrada unicamente
               en manos y pies, ampliamos servicios tratamientos faciales,
               depilacion definitiva y body up. Nuestro deseo es que pases un

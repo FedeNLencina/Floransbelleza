@@ -50,3 +50,66 @@
   font-weight: 600;
   letter-spacing: -0.015625rem;
 }
+
+.aboutFirstSection {
+  margin-top: 345px;
+}
+
+.aboutTitleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aboutTitle {
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  color: #151515;
+  font-weight: 600;
+  margin: 0;
+}
+
+.dividerAbout::before {
+  height: 3px;
+  width: 75px;
+  content: "";
+  margin-right: 1rem;
+  vertical-align: super;
+  display: inline-block;
+  background-color: #ffd8cb;
+}
+
+.imgAbout {
+  width: 60%;
+}
+
+@media (width<500px) {
+  .aboutTitleContainer {
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutTitle {
+    font-size: 2rem;
+  }
+
+  .aboutParagraph {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .imgAboutContainer {
+    padding-top: 1.5rem;
+  }
+
+  .imgAboutContainer {
+    height: auto;
+  }
+
+  .imgAbout {
+    height: auto;
+    width: 90%;
+  }
+}
