@@ -1,7 +1,7 @@
 import React from "react";
-import "./titleContainer.css";
+import "./titleContainerAbout.css";
 
-export function TitleContainer() {
+export function TitleContainerAbout() {
   return (
     <div className="pictureGalleryTitle">
       <h2>Un poco de nuestro trabajo</h2>

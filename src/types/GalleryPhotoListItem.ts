@@ -1,5 +1,5 @@
 export type GalleryPhotoListItem = {
   id: number;
-  title: string;
+  title?: string;
   imagePath: string;
 };

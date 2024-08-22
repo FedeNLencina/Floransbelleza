@@ -1,7 +1,7 @@
 import React from "react";
 import firstSectionImage from "../../assets/images/about/Screenshot_307-min.png";
 import "./about.css";
-import { PictureGalery } from "./pictureGallery/PictureGalery";
+import { PictureGaleryAbout } from "./pictureGalleryAbout/PictureGaleryAbout";
 
 export default function About() {
   return (
@@ -43,7 +43,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <PictureGalery />
+      <PictureGaleryAbout />
     </div>
   );
 }

@@ -6,7 +6,9 @@ type GalleryPhotoProps = {
   galleryPhoto: GalleryPhotoListItem;
 };
 
-export default function GalleryPhoto({ galleryPhoto }: GalleryPhotoProps) {
+export default function galleryPhotosAbout({
+  galleryPhoto,
+}: GalleryPhotoProps) {
   return (
     <div className="box col-lg-3 col-3">
       <div className="imgBx">

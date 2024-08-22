@@ -13,14 +13,9 @@ export function Navbar() {
   const isAboutPathAndIsInactive = !colorChange && isAboutPath;
   const isNotAboutPathAndIsActive = colorChange && !isAboutPath;
 
-  console.log("isAboutPathAndIsActive:", isAboutPathAndIsActive);
-  console.log("isAboutPathAndIsInactive:", isAboutPathAndIsInactive);
-  console.log("isNotAboutPathAndIsActive:", isNotAboutPathAndIsActive);
-
   useEffect(() => {
     const changeNavbarColor = (): void => {
       if (isAboutPath) {
-        console.log("entre en current path ");
         setColorchange(false);
         if (window.scrollY >= 20) {
           setColorchange(true);
@@ -31,7 +26,6 @@ export function Navbar() {
         setColorchange(true);
       }
     };
-    console.log("current path: ", currentPath);
 
     changeNavbarColor();
 
