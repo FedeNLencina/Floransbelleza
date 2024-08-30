@@ -2,6 +2,9 @@ import React from "react";
 import firstSectionImage from "../../assets/images/about/Screenshot_307-min.png";
 import "./about.css";
 import { PictureGaleryAbout } from "./pictureGalleryAbout/PictureGaleryAbout";
+import { Testimonials } from "@components/testimonials/Testimonials";
+import { Footer } from "@components/footer/Footer";
+import { ScrollTopButton } from "@components/home/scrollTopButton/ScrollTopButton";
 
 export default function About() {
   return (
@@ -44,6 +47,9 @@ export default function About() {
         </div>
       </div>
       <PictureGaleryAbout />
+      <Testimonials />
+      <Footer />
+      <ScrollTopButton offset={200} />
     </div>
   );
 }
