@@ -84,6 +84,12 @@
 }
 
 @media (width<500px) {
+  .topSection {
+    padding-bottom: 40px;
+  }
+  .aboutFirstSection {
+    margin-top: 150px;
+  }
   .aboutTitleContainer {
     padding-top: 3rem;
     display: flex;
@@ -110,6 +116,6 @@
 
   .imgAbout {
     height: auto;
-    width: 90%;
+    margin-top: 30px;
   }
 }
