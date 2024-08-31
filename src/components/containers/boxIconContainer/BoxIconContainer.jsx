@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { ServiceHomeIconContext } from "../../../context/ServiceHomeIconContext";
 import { BoxIcon } from "../../boxes/boxIcon/BoxIcon";
 import "./boxIconContainer.css";
-import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 export function BoxIconContainer({ items }) {
@@ -30,13 +29,13 @@ export function BoxIconContainer({ items }) {
   return (
     <>
       {!items.length > 1 ? (
-        <Skeleton />
+        <Loader />
       ) : (
         <div className="container boxIconContainer">
           <div className="row d-flex justify-content-center">
-            {items.length > 1 &&
-              items.map((service) => {
-                return (
+            {items.map((service) => {
+              return (
+                service.isActive && (
                   <div
                     className={
                       selectedService === service
@@ -50,12 +49,15 @@ export function BoxIconContainer({ items }) {
                   >
                     <BoxIcon item={service}></BoxIcon>
                   </div>
-                );
-              })}
+                )
+              );
+            })}
           </div>
-          <div className="text-center boxIconDescriptionContainer">
-            <p>{descriptionItem}</p>
-          </div>
+          {firstItem.isActive && (
+            <div className="text-center boxIconDescriptionContainer">
+              <p>{descriptionItem}</p>
+            </div>
+          )}
         </div>
       )}
     </>

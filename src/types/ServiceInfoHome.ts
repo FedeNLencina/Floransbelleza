@@ -5,4 +5,5 @@ export type ServiceInfoHome = {
   title: string;
   icon: Icon;
   description: string;
+  isActive: boolean;
 };

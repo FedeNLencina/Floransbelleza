@@ -28,6 +28,7 @@ export function ServiceHome() {
             title: documentRef.title,
             icon: { path: documentRef.imagePath },
             description: documentRef.description,
+            isActive: documentRef.isActive,
           };
           newArray.push(photoGalleryObject);
         });
