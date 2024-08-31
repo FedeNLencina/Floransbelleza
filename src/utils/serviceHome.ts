@@ -14,35 +14,35 @@ const depilationIcon: Icon = { path: depilation };
 
 export const serviceIcons: ServiceInfoHome[] = [
   {
-    id: 1,
+    id: "1",
     title: "Manicure",
     icon: nailIcon,
     description:
       "Nuestros tratamientos de manicura estimulan el crecimiento de las uñas y suavizan la piel seca y sin brillo. Tambien ofrecemos los mejores diseños personalizados para que tus manos puedan lucirse en cualquier momento.",
   },
   {
-    id: 2,
+    id: "2",
     title: "Pedicure",
     icon: pedicureIcon,
     description:
       "Los servicios de pedicura brindan una restauración completa para sus uñas con pulido adicional.",
   },
   {
-    id: 3,
+    id: "3",
     title: "Lifting",
     icon: liftingIcon,
     description:
       "Ofrecemos el mejor servicio de lifting, para fortalecerlas y lucirlas de la mejor manera posible.",
   },
   {
-    id: 4,
+    id: "4",
     title: "Skin Care",
     icon: skinCareIcon,
     description:
       "Utilizamos productos personalizados segun el diagnostico y tipo de cada piel, obteniendo una higiene y tonificacion de piel unica.",
   },
   {
-    id: 5,
+    id: "5",
     title: "Depilacion",
     icon: depilationIcon,
     description:

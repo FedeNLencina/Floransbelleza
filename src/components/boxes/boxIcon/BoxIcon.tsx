@@ -1,8 +1,5 @@
 import React, { useContext } from "react";
-import {
-  ServiceHomeIconContext,
-  ServiceHomeIconContextType,
-} from "../../../context/ServiceHomeIconContext";
+import { ServiceHomeIconContext } from "../../../context/ServiceHomeIconContext";
 import "./boxIcon.css";
 import { ServiceInfoHome } from "src/types/ServiceInfoHome";
 
@@ -24,7 +21,9 @@ export function BoxIcon({ item }: BoxIconProps) {
       }}
       className="text-center divIconContainer"
     >
-      <img className="iconImg" src={item.icon.path} alt={item.title}></img>
+      {item.icon.path && (
+        <img className="iconImg" src={item.icon.path} alt={item.title}></img>
+      )}
       <p className="iconTitle">{item.title}</p>
     </div>
   );

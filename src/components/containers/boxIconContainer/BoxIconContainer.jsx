@@ -9,12 +9,10 @@ export function BoxIconContainer({ items }) {
   const { descriptionHandler, descriptionItem } = useContext(
     ServiceHomeIconContext
   );
-  const [serviceItems, setServiceItems] = useState(items);
 
-  const firstItem = serviceItems[0];
+  const firstItem = items.length > 1 && items[0];
 
   const [selectedService, setSelectedService] = useState(null);
-  const [selected, setSelected] = useState(false);
 
   const serviceHandleClick = (service) => {
     setSelectedService(service);
@@ -31,28 +29,29 @@ export function BoxIconContainer({ items }) {
 
   return (
     <>
-      {!serviceItems ? (
+      {!items.length > 1 ? (
         <Skeleton />
       ) : (
         <div className="container boxIconContainer">
           <div className="row d-flex justify-content-center">
-            {serviceItems?.map((service) => {
-              return (
-                <div
-                  className={
-                    selectedService === service
-                      ? `col-lg-2 col-6 boxIconColumn selected`
-                      : `col-lg-2 col-6 boxIconColumn`
-                  }
-                  key={service.id}
-                  onClick={() => {
-                    serviceHandleClick(service);
-                  }}
-                >
-                  <BoxIcon item={service}></BoxIcon>
-                </div>
-              );
-            })}
+            {items.length > 1 &&
+              items.map((service) => {
+                return (
+                  <div
+                    className={
+                      selectedService === service
+                        ? `col-lg-2 col-6 boxIconColumn selected`
+                        : `col-lg-2 col-6 boxIconColumn`
+                    }
+                    key={service.id}
+                    onClick={() => {
+                      serviceHandleClick(service);
+                    }}
+                  >
+                    <BoxIcon item={service}></BoxIcon>
+                  </div>
+                );
+              })}
           </div>
           <div className="text-center boxIconDescriptionContainer">
             <p>{descriptionItem}</p>
