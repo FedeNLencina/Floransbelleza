@@ -8,6 +8,7 @@ import { Title } from "../../commons/Title/Title";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "src/firebase/config.database";
 import { ServiceInfoHome } from "src/types/ServiceInfoHome";
+import { Loader } from "@components/loader/Loader";
 
 export function ServiceHome() {
   const [servicesArray, setServicesArray] = useState<Array<ServiceInfoHome>>(
@@ -43,16 +44,18 @@ export function ServiceHome() {
   }, []);
 
   return (
-    <div className="container-fluid serviceHomeContainer">
-      <Title titleText="Nuestros servicios" />
-      <ServiceHomeProvider>
-        {servicesArray.length > 1 ? (
-          <BoxIconContainer items={servicesArray} />
-        ) : (
-          <></>
-        )}
-      </ServiceHomeProvider>
-      <Button text="Ver servicios" route="/servicios" />
-    </div>
+    <>
+      {servicesArray.length > 1 ? (
+        <div className="container-fluid serviceHomeContainer">
+          <Title titleText="Nuestros servicios" />
+          <ServiceHomeProvider>
+            <BoxIconContainer items={servicesArray} />
+          </ServiceHomeProvider>
+          <Button text="Ver servicios" route="/servicios" />
+        </div>
+      ) : (
+        <Loader />
+      )}
+    </>
   );
 }
