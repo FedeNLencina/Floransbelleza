@@ -1,15 +1,14 @@
 import React, { useEffect } from "react";
 
 export function InstagramFeed() {
+  const toolbarElement = document.querySelector(".eapps-widget-toolbar");
+
   useEffect(() => {
-    const observerCallback = (mutationsList, observer) => {
+    const observerCallback = (mutationsList: any, observer: any) => {
       for (let mutation of mutationsList) {
         if (mutation.type === "childList") {
-          mutation.addedNodes.forEach((node) => {
-            if (
-              node.tagName === "A" &&
-              node.textContent.trim() === "Free Instagram Feed widget"
-            ) {
+          mutation.addedNodes.forEach((node: any) => {
+            if (node.textContent.trim() === "Free Instagram Feed widget") {
               node.parentNode.removeChild(node);
               observer.disconnect();
             }
@@ -20,10 +19,16 @@ export function InstagramFeed() {
 
     const observer = new MutationObserver(observerCallback);
 
-    observer.observe(document.body, { childList: true, subtree: true });
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ["class"],
+    });
 
     return () => {
       observer.disconnect();
+      toolbarElement && toolbarElement?.remove();
     };
   }, []);
 
