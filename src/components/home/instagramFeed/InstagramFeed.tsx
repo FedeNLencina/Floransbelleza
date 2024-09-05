@@ -8,6 +8,10 @@ export function InstagramFeed() {
       for (let mutation of mutationsList) {
         if (mutation.type === "childList") {
           mutation.addedNodes.forEach((node: any) => {
+            if (node.classList.contains("eapps-widget-toolbar")) {
+              node.parentNode.removeChild(node);
+              observer.disconnect();
+            }
             if (node.textContent.trim() === "Free Instagram Feed widget") {
               node.parentNode.removeChild(node);
               observer.disconnect();
@@ -19,12 +23,12 @@ export function InstagramFeed() {
 
     const observer = new MutationObserver(observerCallback);
 
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
-      attributes: true,
-      attributeFilter: ["class"],
-    });
+    setTimeout(() => {
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+      });
+    }, 100);
 
     return () => {
       observer.disconnect();
