@@ -12,6 +12,10 @@
   position: relative;
 }
 
+.heroCarousel {
+  padding-top: 10px;
+}
+
 .heroInfo {
   padding-left: 2rem;
 }
@@ -67,7 +71,7 @@
 
 @media (width<500px) {
   #carouselExampleInterval {
-    height: 32vh;
+    width: 99%;
   }
 
   .carrouselImage {
@@ -86,6 +90,7 @@
 
   .heroCarousel {
     padding-right: 0%;
+    padding-top: 0;
     height: 64vh;
     display: flex;
     flex-direction: column;

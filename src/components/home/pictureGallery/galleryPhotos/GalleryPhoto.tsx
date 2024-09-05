@@ -12,11 +12,6 @@ export default function GalleryPhoto({ galleryPhoto }: GalleryPhotoProps) {
       <div className="imgBx">
         <LazyLoadImage src={galleryPhoto.imagePath} />
       </div>
-      <div className="content">
-        <div>
-          <h2>{galleryPhoto.title}</h2>
-        </div>
-      </div>
     </div>
   );
 }
