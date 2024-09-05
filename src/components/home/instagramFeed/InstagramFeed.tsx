@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 
 export function InstagramFeed() {
-  const toolbarElement = document.querySelector(".eapps-widget-toolbar");
-
   useEffect(() => {
     const observerCallback = (mutationsList: any, observer: any) => {
       for (let mutation of mutationsList) {
@@ -32,7 +30,6 @@ export function InstagramFeed() {
 
     return () => {
       observer.disconnect();
-      toolbarElement && toolbarElement?.remove();
     };
   }, []);
 
