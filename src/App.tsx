@@ -6,6 +6,7 @@ import ProductServices from "./components/productServicies/ProductServices";
 import "animate.css";
 import React from "react";
 import { Courses } from "@components/courses/Courses";
+import Contact from "@components/contact/Contact";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/servicios" element={<ProductServices />} />
         <Route path="/talleres" element={<Courses />} />
+        <Route path="/contacto" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );
