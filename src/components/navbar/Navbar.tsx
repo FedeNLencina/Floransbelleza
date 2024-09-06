@@ -7,15 +7,19 @@ export function Navbar() {
   const location = useLocation();
   const currentPath = location.pathname;
   const isAboutPath = currentPath === "/about";
+  const isContactPath = currentPath === "/contacto";
   const [colorChange, setColorchange] = useState(true);
 
-  const isAboutPathAndIsActive = colorChange && isAboutPath;
-  const isAboutPathAndIsInactive = !colorChange && isAboutPath;
-  const isNotAboutPathAndIsActive = colorChange && !isAboutPath;
+  const isAboutOrContactPathAndIsActive =
+    colorChange && (isAboutPath || isContactPath);
+  const isAboutOrContactPathAndIsInactive =
+    !colorChange && (isAboutPath || isContactPath);
+  const isNotAboutPathAndIsActive =
+    colorChange && !isAboutPath && !isContactPath;
 
   useEffect(() => {
     const changeNavbarColor = (): void => {
-      if (isAboutPath) {
+      if (isAboutPath || isContactPath) {
         setColorchange(false);
         if (window.scrollY >= 20) {
           setColorchange(true);
@@ -37,7 +41,8 @@ export function Navbar() {
   return (
     <nav
       className={`navbar sticky-top navbar-expand-lg ${
-        (isAboutPathAndIsActive && !isAboutPathAndIsInactive) ||
+        (isAboutOrContactPathAndIsActive &&
+          !isAboutOrContactPathAndIsInactive) ||
         isNotAboutPathAndIsActive
           ? "navActive"
           : "navInactive"
@@ -89,7 +94,8 @@ export function Navbar() {
                   <Link
                     to="/"
                     className={`navLink ${
-                      (isAboutPathAndIsActive && !isAboutPathAndIsInactive) ||
+                      (isAboutOrContactPathAndIsActive &&
+                        !isAboutOrContactPathAndIsInactive) ||
                       isNotAboutPathAndIsActive
                         ? "linkActive"
                         : "linkInactive"
@@ -107,7 +113,8 @@ export function Navbar() {
                   <Link
                     to="/about"
                     className={`navLink ${
-                      (isAboutPathAndIsActive && !isAboutPathAndIsInactive) ||
+                      (isAboutOrContactPathAndIsActive &&
+                        !isAboutOrContactPathAndIsInactive) ||
                       isNotAboutPathAndIsActive
                         ? "linkActive"
                         : "linkInactive"
@@ -125,7 +132,8 @@ export function Navbar() {
                   <Link
                     to="/servicios"
                     className={`navLink ${
-                      (isAboutPathAndIsActive && !isAboutPathAndIsInactive) ||
+                      (isAboutOrContactPathAndIsActive &&
+                        !isAboutOrContactPathAndIsInactive) ||
                       isNotAboutPathAndIsActive
                         ? "linkActive"
                         : "linkInactive"
@@ -142,7 +150,8 @@ export function Navbar() {
                   <Link
                     to="/talleres"
                     className={`navLink ${
-                      (isAboutPathAndIsActive && !isAboutPathAndIsInactive) ||
+                      (isAboutOrContactPathAndIsActive &&
+                        !isAboutOrContactPathAndIsInactive) ||
                       isNotAboutPathAndIsActive
                         ? "linkActive"
                         : "linkInactive"
@@ -159,7 +168,8 @@ export function Navbar() {
                   <Link
                     to="/contacto"
                     className={`navLink ${
-                      (isAboutPathAndIsActive && !isAboutPathAndIsInactive) ||
+                      (isAboutOrContactPathAndIsActive &&
+                        !isAboutOrContactPathAndIsInactive) ||
                       isNotAboutPathAndIsActive
                         ? "linkActive"
                         : "linkInactive"
