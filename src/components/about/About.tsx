@@ -9,7 +9,7 @@ import { ScrollTopButton } from "@components/home/scrollTopButton/ScrollTopButto
 export default function About() {
   return (
     <div className="container-fluid aboutContainer">
-      <section className="topSection">
+      <section className="topSectionAbout">
         <div className="topSectionBlackBackground"></div>
         <div className="topSectionInfoContainer">
           <h1 className="topSectionTitle">Sobre Floransbelleza</h1>
