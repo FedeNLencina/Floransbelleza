@@ -1,5 +1,4 @@
 import React from "react";
-import firstSectionImage from "../../assets/images/about/Screenshot_307-min.png";
 import "./contact.css";
 import { ScrollTopButton } from "@components/home/scrollTopButton/ScrollTopButton";
 
