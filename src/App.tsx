@@ -7,6 +7,7 @@ import "animate.css";
 import React from "react";
 import { Courses } from "@components/courses/Courses";
 import Contact from "@components/contact/Contact";
+import { WhatsAppButton } from "@components/contact/whatssapButton/WhatssapButton";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/talleres" element={<Courses />} />
         <Route path="/contacto" element={<Contact />} />
       </Routes>
+      <WhatsAppButton />
     </BrowserRouter>
   );
 }
