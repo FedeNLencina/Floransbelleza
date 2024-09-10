@@ -4,7 +4,6 @@ import "./about.css";
 import { PictureGaleryAbout } from "./pictureGalleryAbout/PictureGaleryAbout";
 import { Testimonials } from "@components/testimonials/Testimonials";
 import { Footer } from "@components/footer/Footer";
-import { ScrollTopButton } from "@components/home/scrollTopButton/ScrollTopButton";
 
 export default function About() {
   return (

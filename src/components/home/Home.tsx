@@ -8,7 +8,6 @@ import { Booking } from "./booking/Booking";
 import { PictureGalery } from "./pictureGallery/PictureGalery";
 import { InstagramFeed } from "./instagramFeed/InstagramFeed";
 import { Footer } from "../footer/Footer";
-import { ScrollTopButton } from "./scrollTopButton/ScrollTopButton";
 
 export function Home() {
   return (

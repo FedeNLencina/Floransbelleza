@@ -7,15 +7,11 @@ export const WhatsAppButton = () => {
         if (mutation.type === "childList") {
           mutation.addedNodes.forEach((node: any) => {
             if (node.nodeType === 1 && node.classList) {
-              if (node.classList.contains("Main__Container-sc-rfigzw-0")) {
+              console.log("node: ", node.classList);
+              if (node.classList.contains("Main__MainComponent-sc-1nlcdkx-1")) {
                 const enlace = node.querySelector("a");
-                if (
-                  enlace &&
-                  enlace.textContent.trim() === "Free WhatsApp Chat button"
-                ) {
-                  enlace.parentNode.removeChild(enlace);
-                  observer.disconnect();
-                }
+                enlace.parentNode.removeChild(enlace);
+                observer.disconnect();
               }
             }
           });

@@ -1,7 +1,6 @@
 import React from "react";
 import "./contact.css";
 import { InstagramFeed } from "@components/home/instagramFeed/InstagramFeed";
-import { WhatsAppButton } from "./whatssapButton/WhatssapButton";
 
 export default function Contact() {
   return (
