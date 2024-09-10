@@ -49,7 +49,6 @@ export default function About() {
       <PictureGaleryAbout />
       <Testimonials />
       <Footer />
-      <ScrollTopButton offset={200} />
     </div>
   );
 }

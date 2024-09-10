@@ -23,7 +23,6 @@ export function Home() {
       <PictureGalery />
       <InstagramFeed />
       <Footer />
-      <ScrollTopButton offset={200} />
     </>
   );
 }

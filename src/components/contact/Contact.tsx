@@ -32,8 +32,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <WhatsAppButton />
-      {/* <ScrollTopButton offset={200} /> */}
     </div>
   );
 }
