@@ -1,11 +1,24 @@
 import React, { useEffect } from "react";
 
-export function InstagramFeed() {
+interface InstagramFeedProps {
+  isContactPath?: boolean;
+}
+
+export function InstagramFeed({ isContactPath }: InstagramFeedProps) {
   useEffect(() => {
     const observerCallback = (mutationsList: any, observer: any) => {
       for (let mutation of mutationsList) {
         if (mutation.type === "childList") {
           mutation.addedNodes.forEach((node: any) => {
+            if (
+              node.classList.contains("eapps-instagram-feed-title-container")
+            ) {
+              console.log("entro en container title");
+              if (isContactPath) {
+                node.parentNode.removeChild(node);
+                observer.disconnect();
+              }
+            }
             if (node.classList.contains("eapps-widget-toolbar")) {
               node.parentNode.removeChild(node);
               observer.disconnect();

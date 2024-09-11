@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import Logo from "../../assets/images/logo/logo.svg";
 import "./navbar.css";
 import { Link, useLocation } from "react-router-dom";
-import { ScrollTopButton } from "@components/home/scrollTopButton/ScrollTopButton";
-import useScrollPosition from "src/hooks/useScrollPosition";
 
 export function Navbar() {
   const location = useLocation();
