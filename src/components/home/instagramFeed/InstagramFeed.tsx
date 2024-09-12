@@ -47,7 +47,7 @@ export function InstagramFeed({ isContactPath }: InstagramFeedProps) {
 
   return (
     <div
-      className="elfsight-app-2a936f9d-ea35-4533-807a-a4d7280cd216 instaLayout"
+      className="elfsight-app-2a936f9d-ea35-4533-807a-a4d7280cd216 instaLayout animate__animated animate__fadeInLeft"
       data-elfsight-app-lazy
     ></div>
   );

@@ -5,7 +5,7 @@ import { GalleryPhotos } from "./galleryPhotos/GalleryPhotos";
 
 export function PictureGalery() {
   return (
-    <div className="pictureGalleryMainContainer">
+    <div className="pictureGalleryMainContainer animate__animated animate__fadeInLeft">
       <div className="container">
         <TitleContainer />
         <GalleryPhotos />

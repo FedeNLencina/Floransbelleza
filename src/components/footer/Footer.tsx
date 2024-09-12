@@ -5,7 +5,10 @@ import { useWindowDimensions } from "src/hooks/useWindowDimention";
 export function Footer() {
   const { isMobile, isDesktop } = useWindowDimensions();
   return (
-    <div className="container-fluid footerContainer" id="contacto">
+    <div
+      className="container-fluid footerContainer animate__animated animate__fadeInLeft"
+      id="contacto"
+    >
       <div className="container">
         <div className="row">
           <div className="col-8 col-lg-4">

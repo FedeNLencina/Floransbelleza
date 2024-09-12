@@ -3,7 +3,7 @@ import "./booking.css";
 
 export function Booking() {
   return (
-    <div className="bookingContainer w-100">
+    <div className="bookingContainer w-100 animate__animated animate__fadeInLeft">
       <div className="blackBackground"></div>
       <div className="container d-flex flex-column justify-content-center">
         <div className="bookingContentContainer text-center">
