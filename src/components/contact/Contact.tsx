@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 export default function Contact() {
   const location = useLocation();
   const currentPath = location.pathname;
-  const isContactPath = currentPath === "/contact";
+  const isContactPath = currentPath === "/contacto";
 
   return (
     <div className="container-fluid contactContainer">
@@ -22,7 +22,7 @@ export default function Contact() {
           Donde encontrarnos
         </div>
         <hr className="contactFirstSectionTitleLine" />
-        <div className="row contactFirstSectionRow d-flex justify-content-center">
+        <div className="row contactFirstSectionRow d-flex justify-content-center p-lg-5">
           <div className="col-lg-6 col-12 instagramFeedContainer">
             <InstagramFeed isContactPath={isContactPath} />
           </div>

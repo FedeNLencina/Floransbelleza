@@ -2,16 +2,22 @@ import React, { useEffect } from "react";
 
 export const WhatsAppButton = () => {
   useEffect(() => {
-    const observerCallback = (mutationsList: any, observer: any) => {
+    const observerCallback = (mutationsList: any) => {
       mutationsList.forEach((mutation: any) => {
         if (mutation.type === "childList") {
           mutation.addedNodes.forEach((node: any) => {
             if (node.nodeType === 1 && node.classList) {
-              console.log("node: ", node.classList);
               if (node.classList.contains("Main__MainComponent-sc-1nlcdkx-1")) {
                 const enlace = node.querySelector("a");
                 enlace.parentNode.removeChild(enlace);
-                observer.disconnect();
+              }
+              if (node.classList.contains("Main__MainComponent-sc-1nlcdkx-1")) {
+                const linkButton = node.querySelector("button");
+                if (linkButton) {
+                  console.log("entre en el boton");
+                  const title = linkButton.getAttribute("title");
+                  linkButton.setAttribute("target", "_blank");
+                }
               }
             }
           });
@@ -26,7 +32,7 @@ export const WhatsAppButton = () => {
         childList: true,
         subtree: true,
       });
-    }, 100);
+    }, 1000);
 
     return () => {
       observer.disconnect();

@@ -6,26 +6,25 @@ interface InstagramFeedProps {
 
 export function InstagramFeed({ isContactPath }: InstagramFeedProps) {
   useEffect(() => {
-    const observerCallback = (mutationsList: any, observer: any) => {
+    const observerCallback = (mutationsList: any) => {
       for (let mutation of mutationsList) {
         if (mutation.type === "childList") {
           mutation.addedNodes.forEach((node: any) => {
-            if (
-              node.classList.contains("eapps-instagram-feed-title-container")
-            ) {
-              console.log("entro en container title");
-              if (isContactPath) {
-                node.parentNode.removeChild(node);
-                observer.disconnect();
+            if (node.nodeType === 1) {
+              if (node.textContent.trim() === "Seguinos en Instagram") {
+                const divTitleContainer = node.querySelector("div");
+                if (isContactPath) {
+                  divTitleContainer.style.display = "none";
+                } else {
+                  divTitleContainer.style.display = "block";
+                }
               }
-            }
-            if (node.classList.contains("eapps-widget-toolbar")) {
-              node.parentNode.removeChild(node);
-              observer.disconnect();
-            }
-            if (node.textContent.trim() === "Free Instagram Feed widget") {
-              node.parentNode.removeChild(node);
-              observer.disconnect();
+              if (node.classList.contains("eapps-widget-toolbar")) {
+                node.parentNode.removeChild(node);
+              }
+              if (node.textContent.trim() === "Free Instagram Feed widget") {
+                node.parentNode.removeChild(node);
+              }
             }
           });
         }
@@ -44,7 +43,7 @@ export function InstagramFeed({ isContactPath }: InstagramFeedProps) {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [isContactPath]);
 
   return (
     <div
