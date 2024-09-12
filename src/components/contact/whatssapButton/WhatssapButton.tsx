@@ -9,15 +9,10 @@ export const WhatsAppButton = () => {
             if (node.nodeType === 1 && node.classList) {
               if (node.classList.contains("Main__MainComponent-sc-1nlcdkx-1")) {
                 const enlace = node.querySelector("a");
-                enlace.parentNode.removeChild(enlace);
-              }
-              if (node.classList.contains("Main__MainComponent-sc-1nlcdkx-1")) {
+                enlace.style.display = "none";
                 const linkButton = node.querySelector("button");
-                if (linkButton) {
-                  console.log("entre en el boton");
-                  const title = linkButton.getAttribute("title");
-                  linkButton.setAttribute("target", "_blank");
-                }
+                console.log("link button: ", linkButton);
+                linkButton.setAttribute("target", "_blank");
               }
             }
           });
@@ -32,7 +27,7 @@ export const WhatsAppButton = () => {
         childList: true,
         subtree: true,
       });
-    }, 1000);
+    }, 100);
 
     return () => {
       observer.disconnect();
