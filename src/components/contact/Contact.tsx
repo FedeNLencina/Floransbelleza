@@ -2,6 +2,7 @@ import React from "react";
 import "./contact.css";
 import { InstagramFeed } from "@components/home/instagramFeed/InstagramFeed";
 import { useLocation } from "react-router-dom";
+import { Footer } from "@components/footer/Footer";
 
 export default function Contact() {
   const location = useLocation();
@@ -38,6 +39,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
+      <Footer isContactPath={isContactPath} />
     </div>
   );
 }
