@@ -10,9 +10,11 @@ export const WhatsAppButton = () => {
               if (node.classList.contains("Main__MainComponent-sc-1nlcdkx-1")) {
                 const enlace = node.querySelector("a");
                 enlace.style.display = "none";
+              }
+              if (node.textContent.trim() === "Chat on WhatsApp") {
                 const linkButton = node.querySelector("button");
-                console.log("link button: ", linkButton);
                 linkButton.setAttribute("target", "_blank");
+                linkButton.setAttribute("rel", "noopener noreferrer");
               }
             }
           });

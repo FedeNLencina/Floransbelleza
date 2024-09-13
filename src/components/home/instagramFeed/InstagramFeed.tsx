@@ -14,16 +14,20 @@ export function InstagramFeed({ isContactPath }: InstagramFeedProps) {
               if (node.textContent.trim() === "Seguinos en Instagram") {
                 const divTitleContainer = node.querySelector("div");
                 if (isContactPath) {
-                  divTitleContainer.style.display = "none";
+                  divTitleContainer
+                    ? (divTitleContainer.style.display = "none")
+                    : "";
                 } else {
-                  divTitleContainer.style.display = "block";
+                  divTitleContainer
+                    ? (divTitleContainer.style.display = "inline")
+                    : "";
                 }
               }
               if (node.classList.contains("eapps-widget-toolbar")) {
-                node.parentNode.removeChild(node);
+                node.parentNode?.removeChild(node);
               }
               if (node.textContent.trim() === "Free Instagram Feed widget") {
-                node.parentNode.removeChild(node);
+                node.parentNode?.removeChild(node);
               }
             }
           });
