@@ -4,7 +4,12 @@ import { testimonials } from "../../utils/testimonials";
 
 export function Testimonials() {
   return (
-    <div className="testimonialsContainer animate__animated animate__fadeInLeft">
+    <div
+      className="testimonialsContainer"
+      data-aos="fade-right"
+      data-aos-easing="ease-in-sine"
+      data-aos-duration="1000"
+    >
       <div className="text-center testimonialsTitleContainer">
         <h1 className="testimonialsTitle">Nuestros testimionios</h1>
       </div>

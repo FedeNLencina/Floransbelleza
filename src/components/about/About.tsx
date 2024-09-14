@@ -8,14 +8,24 @@ import { Footer } from "@components/footer/Footer";
 export default function About() {
   return (
     <div className="container-fluid aboutContainer">
-      <section className="topSectionAbout">
+      <section
+        className="topSectionAbout"
+        data-aos="fade-right"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="1000"
+      >
         <div className="topSectionBlackBackground"></div>
         <div className="topSectionInfoContainer">
           <h1 className="topSectionTitle">Sobre Floransbelleza</h1>
           <h2 className="topSectionText">Conocenos</h2>
         </div>
       </section>
-      <div className="container aboutFirstSection">
+      <div
+        className="container aboutFirstSection"
+        data-aos="fade-right"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="1000"
+      >
         <div className="row">
           <div className="col-12 col-lg-6">
             <div className="col-12 aboutTitleContainer">

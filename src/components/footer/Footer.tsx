@@ -3,7 +3,7 @@ import "./footer.css";
 import { useWindowDimensions } from "src/hooks/useWindowDimention";
 
 interface FooterProps {
-  isContactPath: boolean;
+  isContactPath?: boolean;
 }
 
 export function Footer({ isContactPath }: FooterProps) {

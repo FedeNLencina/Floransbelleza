@@ -46,7 +46,12 @@ export function ServiceHome() {
   return (
     <>
       {servicesArray.length > 1 ? (
-        <div className="container-fluid serviceHomeContainer animate__animated animate__fadeInLeft">
+        <div
+          className="container-fluid serviceHomeContainer"
+          data-aos="fade-right"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="1000"
+        >
           <Title titleText="Nuestros servicios" />
           <ServiceHomeProvider>
             <BoxIconContainer items={servicesArray} />

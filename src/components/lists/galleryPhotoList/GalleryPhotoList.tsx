@@ -9,7 +9,11 @@ type GalleryPhotoListProps = {
 
 export function GalleryPhotoList({ galleryPhotoList }: GalleryPhotoListProps) {
   return (
-    <div className="row galleryPhotoContainer">
+    <div
+      className="row galleryPhotoContainer"
+      data-aos="flip-left"
+      data-aos-duration="1000"
+    >
       {galleryPhotoList.map((photoItem) => {
         return <GalleryPhoto key={photoItem.id} galleryPhoto={photoItem} />;
       })}

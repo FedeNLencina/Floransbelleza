@@ -8,7 +8,12 @@ import { useWindowDimensions } from "../../../hooks/useWindowDimention";
 export function Hero() {
   const { isMobile, isDesktop } = useWindowDimensions();
   return (
-    <div className="container-fluid hero animate__animated animate__fadeInLeft">
+    <div
+      className="container-fluid hero"
+      data-aos="fade-right"
+      data-aos-easing="ease-in-sine"
+      data-aos-duration="1000"
+    >
       <div className="row d-flex justify-content-center rowContainer">
         <div className="col-lg-6 col-12 text-center container-fluid heroInfo">
           <div className="titleContainer">

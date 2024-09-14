@@ -8,7 +8,6 @@ import { Booking } from "./booking/Booking";
 import { PictureGalery } from "./pictureGallery/PictureGalery";
 import { InstagramFeed } from "./instagramFeed/InstagramFeed";
 import { Footer } from "../footer/Footer";
-import "animate.css";
 
 export function Home() {
   return (

@@ -6,7 +6,12 @@ import { useWindowDimensions } from "src/hooks/useWindowDimention";
 export function AboutHome() {
   const { isMobile, isDesktop } = useWindowDimensions();
   return (
-    <div className="container d-flex justify-content-center aboutHomeContainer animate__animated animate__fadeInLeft">
+    <div
+      className="container d-flex justify-content-center aboutHomeContainer "
+      data-aos="fade-left"
+      data-aos-easing="ease-in-sine"
+      data-aos-duration="1000"
+    >
       <div className="row aboutHomeContainerRow">
         {isDesktop && (
           <div className="col-lg-6 col-12 d-flex justify-content-center align-items-center imgAboutHomeContainer">
