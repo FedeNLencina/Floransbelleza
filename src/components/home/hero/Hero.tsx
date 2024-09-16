@@ -4,16 +4,12 @@ import uniasHero1 from "../../../assets/images/backgrounds/UniasHero1Piel.png";
 import uniasHero2 from "../../../assets/images/backgrounds/UniasHero2Piel.png";
 import uniasHero3 from "../../../assets/images/backgrounds/UniasHero3Piel.png";
 import { useWindowDimensions } from "../../../hooks/useWindowDimention";
+import "animate.css";
 
 export function Hero() {
   const { isMobile, isDesktop } = useWindowDimensions();
   return (
-    <div
-      className="container-fluid hero"
-      data-aos="fade-right"
-      data-aos-easing="ease-in-sine"
-      data-aos-duration="1000"
-    >
+    <div className="container-fluid hero animate__animated animate__fadeInLeft">
       <div className="row d-flex justify-content-center rowContainer">
         <div className="col-lg-6 col-12 text-center container-fluid heroInfo">
           <div className="titleContainer">

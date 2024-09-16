@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import "animate.css";
 
 interface InstagramFeedProps {
   isContactPath?: boolean;
@@ -19,7 +20,7 @@ export function InstagramFeed({ isContactPath }: InstagramFeedProps) {
                     : "";
                 } else {
                   divTitleContainer
-                    ? (divTitleContainer.style.display = "inline")
+                    ? (divTitleContainer.style.display = "block")
                     : "";
                 }
               }
@@ -47,15 +48,24 @@ export function InstagramFeed({ isContactPath }: InstagramFeedProps) {
     return () => {
       observer.disconnect();
     };
-  }, [isContactPath]);
+  }, []);
 
   return (
-    <div
-      className="elfsight-app-2a936f9d-ea35-4533-807a-a4d7280cd216 instaLayout animate__animated animate__fadeInLeft"
-      data-elfsight-app-lazy
-      data-aos="flip-left"
-      data-aos-easing="ease-in-sine"
-      data-aos-duration="1000"
-    ></div>
+    <>
+      {!isContactPath ? (
+        <div
+          className="elfsight-app-2a936f9d-ea35-4533-807a-a4d7280cd216 instaLayout"
+          data-elfsight-app-lazy
+          data-aos="flip-left"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="1000"
+        ></div>
+      ) : (
+        <div
+          className="elfsight-app-2a936f9d-ea35-4533-807a-a4d7280cd216 instaLayout animate__animated animate__fadeInLeft"
+          data-elfsight-app-lazy
+        ></div>
+      )}
+    </>
   );
 }

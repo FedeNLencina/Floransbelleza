@@ -39,7 +39,7 @@ export const WhatsAppButton = () => {
   return (
     <>
       <div
-        className={`elfsight-app-ad7e03b3-d5e1-472a-9f36-3ddaec6abe38 whatsAppButton`}
+        className="elfsight-app-ad7e03b3-d5e1-472a-9f36-3ddaec6abe38 whatsAppButton"
         data-elfsight-app-lazy
       ></div>
     </>

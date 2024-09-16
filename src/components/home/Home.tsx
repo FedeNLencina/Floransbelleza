@@ -11,7 +11,7 @@ import { Footer } from "../footer/Footer";
 
 export function Home() {
   return (
-    <>
+    <div style={{ overflowX: "hidden" }}>
       <Hero />
       <AboutHome />
       <ServiceHomeProvider>
@@ -22,6 +22,6 @@ export function Home() {
       <PictureGalery />
       <InstagramFeed />
       <Footer />
-    </>
+    </div>
   );
 }
