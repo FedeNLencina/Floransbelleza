@@ -2,7 +2,7 @@ import React from "react";
 import "./cardImage.css";
 import { ServiceListItem } from "src/types/ServiceListItem";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
+import "animate.css";
 type CardImageProps = {
   element: ServiceListItem;
   openModal: (imgPath: string, serviceTitle: string) => void;
@@ -11,7 +11,7 @@ type CardImageProps = {
 export const CardImage = ({ element, openModal }: CardImageProps) => {
   return (
     <>
-      <div className="col-sm-6 col-md-6 col-lg-4 cardCol d-flex justify-content-center aling-items-center">
+      <div className="col-sm-6 col-md-6 col-lg-4 cardCol d-flex justify-content-center aling-items-center animate__animated animate__fadeInLeft">
         <div
           className="card"
           data-bs-toggle="modal"

@@ -18,16 +18,15 @@ export const ProductServiceList = ({ services }: ProductServiceListProps) => {
 
   return (
     <>
-      <div className="row" data-aos="flip-left"
-          data-aos-easing="ease-in-sine"
-          data-aos-duration="1000">
+      <div className="row">
         {services.map((service) => {
           return (
             <>
-              <CardImage
+              <CardImage 
                 element={service}
                 key={service.id}
                 openModal={openModal}
+                
               />
               <ModalImage imgPath={imgPath} title={serviceTitle} />
             </>
