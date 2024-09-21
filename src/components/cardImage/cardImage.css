@@ -85,6 +85,10 @@
   z-index: 1;
 }
 
+.card:hover{
+  cursor: pointer;
+}
+
 .card:hover > img,
 .card.hover > img {
   opacity: 0.1;
