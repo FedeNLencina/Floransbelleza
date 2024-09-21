@@ -18,7 +18,9 @@ export const ProductServiceList = ({ services }: ProductServiceListProps) => {
 
   return (
     <>
-      <div className="row">
+      <div className="row" data-aos="flip-left"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="1000">
         {services.map((service) => {
           return (
             <>
