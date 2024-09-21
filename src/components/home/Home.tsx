@@ -11,7 +11,7 @@ import { Footer } from "../footer/Footer";
 
 export function Home() {
   return (
-    <div style={{ overflowX: "hidden" }}>
+    <div style={{ overflow: "hidden" }}>
       <Hero />
       <AboutHome />
       <ServiceHomeProvider>

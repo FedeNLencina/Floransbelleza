@@ -1,11 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "animate.css";
+import { Loader } from "@components/loader/Loader";
 
 interface InstagramFeedProps {
   isContactPath?: boolean;
 }
 
 export function InstagramFeed({ isContactPath }: InstagramFeedProps) {
+  const [loading, setLoading] = useState<boolean>(true);
+
   useEffect(() => {
     const observerCallback = (mutationsList: any) => {
       for (let mutation of mutationsList) {
@@ -43,7 +46,8 @@ export function InstagramFeed({ isContactPath }: InstagramFeedProps) {
         childList: true,
         subtree: true,
       });
-    }, 100);
+      setLoading(false);
+    }, 1000);
 
     return () => {
       observer.disconnect();
@@ -52,15 +56,20 @@ export function InstagramFeed({ isContactPath }: InstagramFeedProps) {
 
   return (
     <>
-      {!isContactPath ? (
+      {loading && <Loader />}
+      {!isContactPath && !loading && (
         <div
-          className="elfsight-app-2a936f9d-ea35-4533-807a-a4d7280cd216 instaLayout"
-          data-elfsight-app-lazy
           data-aos="flip-left"
           data-aos-easing="ease-in-sine"
           data-aos-duration="1000"
-        ></div>
-      ) : (
+        >
+          <div
+            className="elfsight-app-2a936f9d-ea35-4533-807a-a4d7280cd216 instaLayout"
+            data-elfsight-app-lazy
+          ></div>
+        </div>
+      )}
+      {isContactPath && !loading && (
         <div
           className="elfsight-app-2a936f9d-ea35-4533-807a-a4d7280cd216 instaLayout animate__animated animate__fadeInLeft"
           data-elfsight-app-lazy
