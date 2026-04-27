@@ -10,7 +10,11 @@ export default function GalleryPhoto({ galleryPhoto }: GalleryPhotoProps) {
   return (
     <div className="box col-lg-3 col-3">
       <div className="imgBx">
-        <LazyLoadImage src={galleryPhoto.imagePath} />
+        <LazyLoadImage
+          src={galleryPhoto.imagePath}
+          alt={galleryPhoto.title || "Gallery Photo"}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        />
       </div>
     </div>
   );
