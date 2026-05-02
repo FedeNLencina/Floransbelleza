@@ -30,8 +30,22 @@ export function InstagramFeed({ isContactPath }: InstagramFeedProps) {
               if (node.classList.contains("eapps-widget-toolbar")) {
                 node.parentNode?.removeChild(node);
               }
-              if (node.textContent.trim() === "Free Instagram Feed widget") {
-                node.parentNode?.removeChild(node);
+              if (node.textContent?.trim() === "Free Instagram Feed widget" || 
+                  node.textContent?.toLowerCase().includes("feed instagram") || 
+                  node.textContent?.toLowerCase().includes("instagram feed")) {
+                if (node.tagName === 'A') {
+                  node.style.display = 'none';
+                }
+              }
+              // Also check inside the node for 'a' tags
+              if (node.querySelectorAll) {
+                const aTags = node.querySelectorAll("a");
+                aTags.forEach((a: any) => {
+                  const text = a.textContent?.toLowerCase() || "";
+                  if (text.includes("feed instagram") || text.includes("instagram feed") || text.includes("widget")) {
+                    a.style.display = "none";
+                  }
+                });
               }
             }
           });
@@ -41,13 +55,11 @@ export function InstagramFeed({ isContactPath }: InstagramFeedProps) {
 
     const observer = new MutationObserver(observerCallback);
 
-    setTimeout(() => {
-      observer.observe(document.body, {
-        childList: true,
-        subtree: true,
-      });
-      setLoading(false);
-    }, 1000);
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+    setLoading(false);
 
     return () => {
       observer.disconnect();
